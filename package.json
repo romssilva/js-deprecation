@@ -1,0 +1,25 @@
+{
+  "name": "js-deprecation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romssilva/js-deprecation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romssilva/js-deprecation/issues"
+  },
+  "homepage": "https://github.com/romssilva/js-deprecation#readme",
+  "dependencies": {
+    "esprima": "^4.0.1",
+    "node-dir": "^0.1.17"
+  }
+}
