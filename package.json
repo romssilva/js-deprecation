@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/romssilva/js-deprecation#readme",
   "dependencies": {
-    "esprima": "^4.0.1",
-    "node-dir": "^0.1.17"
+    "esprima": "^4.0.1"
   }
 }
