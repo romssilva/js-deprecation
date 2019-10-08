@@ -5,10 +5,15 @@ const DEBUGGING = true;
 const WRITE = true;
 const FILE_NAME_ASTS = `asts/asts_${new Date().getTime()}.json`
 const FILE_NAME_KEYWORDS = `keywords/keywords_${new Date().getTime()}.json`
-const REGEX = /(deprecated|deprecate|obsolete|unsafe|unstable|(was|has been|will be) (renamed|moved|removed|deleted|replaced))/gmi
+const KEYWORDS_CSV = `csv/keywords_${new Date().getTime()}.csv`
+const PROJECTS_CSV = `csv/projects_${new Date().getTime()}.csv`
+const REGEX = /(deprecated|deprecate|obsolete|(was|has been|will be) (renamed|moved|removed|deleted|replaced))/gmi
+// const REGEX = /(deprecated|deprecate|obsolete|unsafe|(was|has been|will be) (renamed|moved|removed|deleted|replaced))/gmi
+// const REGEX = /(deprecated|deprecate|obsolete|unsafe|unstable|(was|has been|will be) (renamed|moved|removed|deleted|replaced))/gmi
 // const REGEX = /(deprecate|obsolete|unsafe|unstable|(was|has been|will be) (renamed|moved|removed|deleted|replaced))/gm
 const errorFiles = []
 const occurrenciesMap = new Map()
+const projectOccurrenciesMap = new Map()
 
 const debug = msg => {
     DEBUGGING && console.log(msg)
@@ -117,6 +122,7 @@ keywordsOcurrencies.map((keywordsOcurrency, index, array) => {
             occurrenciesMap.set(lowerCaseMatch, 1)
         }
     })
+
     console.log(`Parsing file ${index+1} of ${array.length}`)
     const fileContent = getFileContent(keywordsOcurrency.file)
     try {
@@ -131,12 +137,63 @@ keywordsOcurrencies.map((keywordsOcurrency, index, array) => {
     }
 })
 
+keywordsOcurrencies.map((keywordsOcurrency, index, array) => {
+    const project = keywordsOcurrency.file.substring(11).substring(0, keywordsOcurrency.file.substring(11).indexOf('/'))
+    if (!projectOccurrenciesMap.has(project)) {
+        projectOccurrenciesMap.set(project, new Map([]))
+        Array.from(occurrenciesMap.keys()).map(key => {
+            projectOccurrenciesMap.get(project).set(key, 0)
+        })
+    }
+    keywordsOcurrency.matches.map(match => {
+        const lowerCaseMatch = match.toLowerCase()
+        projectOccurrenciesMap.get(project).set(lowerCaseMatch, projectOccurrenciesMap.get(project).get(lowerCaseMatch) + 1)
+    })
+})
+
 const jsonASTs = JSON.stringify(ASTs, null, 2);
 if (WRITE) {
     fs.writeFile(FILE_NAME_ASTS, jsonASTs, err => {
         if (err) console.log(err);
-        console.log(`Done! ${ASTs.length} files parsed. ${errorFiles.length} files (${(errorFiles.length/ASTs.length)*100}%) failed parsing.`);
+        console.log(`Done! ${ASTs.length} files parsed. ${errorFiles.length} files (${(errorFiles.length/keywordsOcurrencies.length)*100}%) failed parsing.`);
     })
 }
 
 console.log(occurrenciesMap)
+console.log(projectOccurrenciesMap)
+
+const keywordsKeys = Array.from(occurrenciesMap.keys()).join(',')
+const keywordsValues = Array.from(occurrenciesMap.values()).join(',')
+console.log(keywordsKeys)
+console.log(keywordsValues)
+const keywordsCsv =
+`${keywordsKeys}
+${keywordsValues}`
+
+if (WRITE) {
+    fs.writeFile(KEYWORDS_CSV, keywordsCsv, err => {
+        if (err) console.log(err);
+        console.log(`Done! Keywords csv file saved!`);
+    })
+}
+
+const projectsKeys = Array.from(projectOccurrenciesMap.keys()).join(',')
+const projectsValues = Array.from(projectOccurrenciesMap.values()).map((map, index) => {
+    const keywordsValues = Array.from(map.values()).join(',')
+    return `${Array.from(projectOccurrenciesMap.keys())[index]},${keywordsValues}`
+}).reduce((prev, curr) => {
+    return `${prev}${curr}
+`
+}, '')
+
+
+const projectsCsv =
+`,${keywordsKeys}
+${projectsValues}`
+
+if (WRITE) {
+    fs.writeFile(PROJECTS_CSV, projectsCsv, err => {
+        if (err) console.log(err);
+        console.log(`Done! Projects csv file saved!`);
+    })
+}

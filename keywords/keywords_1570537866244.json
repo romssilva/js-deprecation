@@ -1,0 +1,6270 @@
+[
+  {
+    "file": "./projects/async-3.1.0/dist/async.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/async-3.1.0/docs/v2/scripts/async.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/async-3.1.0/docs/v2/scripts/prettify/prettify.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/async-3.1.0/docs/v3/scripts/async.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/async-3.1.0/docs/v3/scripts/prettify/prettify.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/async-3.1.0/lib/priorityQueue.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/async-3.1.0/support/jsdoc/theme/static/scripts/prettify/prettify.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/axios-0.19.0/lib/helpers/deprecatedMethod.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "DEPRECATED",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/axios-0.19.0/test/unit/adapters/http.js",
+    "matches": [
+      "Unsafe"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/js/browser/bluebird.core.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/js/browser/bluebird.core.min.js",
+    "matches": [
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/js/browser/bluebird.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/js/browser/bluebird.min.js",
+    "matches": [
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/src/constants.js",
+    "matches": [
+      "deprecated",
+      "DEPRECATED",
+      "deprecated",
+      "DEPRECATED",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/src/debuggability.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/src/generators.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/src/method.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/src/promise.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/src/settle.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/test/browser/es5-shim.js",
+    "matches": [
+      "has been replaced"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/test/browser/mocha.js",
+    "matches": [
+      "was moved",
+      "was renamed"
+    ]
+  },
+  {
+    "file": "./projects/bluebird-3.7.0/test/mocha/done.js",
+    "matches": [
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/body-parser-1.19.0/index.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/body-parser-1.19.0/lib/types/urlencoded.js",
+    "matches": [
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/commander.js-4.0.0-1/tests/options.regex.test.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/.eslintrc.js",
+    "matches": [
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/internals/array-buffer.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/internals/export.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/internals/redefine.js",
+    "matches": [
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/internals/webkit-string-pad-bug.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/modules/es.array-buffer.slice.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/modules/es.object.to-string.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/modules/es.regexp.to-string.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js/modules/es.symbol.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js-pure/override/internals/export.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/packages/core-js-pure/override/internals/redefine-all.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/tests/compat/tests.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/core-js-3.2.1/tests/tests/es.string.match.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/dotenv-8.1.0/flow-typed/npm/sinon_vx.x.x.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/express-4.17.1/lib/application.js",
+    "matches": [
+      "deprecate",
+      "deprecated",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/express-4.17.1/lib/request.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/express-4.17.1/lib/response.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/express-4.17.1/lib/router/index.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/express-4.17.1/lib/utils.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/Gruntfile.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/dist/jquery.js",
+    "matches": [
+      "Deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/dist/jquery.slim.js",
+    "matches": [
+      "Deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/external/qunit/qunit.js",
+    "matches": [
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/external/sinon/sinon.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "will be removed",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "Unsafe",
+      "unsafe",
+      "Unsafe",
+      "unsafe",
+      "Unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/src/data.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/src/deprecated.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/src/jquery.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/src/selector-sizzle.js",
+    "matches": [
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/data/jquery-1.9.1.js",
+    "matches": [
+      "DEPRECATED",
+      "Deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/data/testinit.js",
+    "matches": [
+      "will be removed",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/data/testrunner.js",
+    "matches": [
+      "will be removed",
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/unit/ajax.js",
+    "matches": [
+      "was replaced",
+      "was removed",
+      "was removed",
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/unit/attributes.js",
+    "matches": [
+      "was removed",
+      "was removed",
+      "was removed",
+      "has been removed"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/unit/deprecated.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/unit/effects.js",
+    "matches": [
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/unit/event.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/jquery-3.4.1/test/unit/manipulation.js",
+    "matches": [
+      "has been removed",
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/lodash-4.17.15/dist/lodash.js",
+    "matches": [
+      "Unsafe",
+      "Unsafe",
+      "was removed",
+      "was removed",
+      "was removed",
+      "was removed",
+      "Unsafe",
+      "Unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/lodash-4.17.15/lib/common/uglify.options.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/lodash-4.17.15/lodash.js",
+    "matches": [
+      "Unsafe",
+      "Unsafe",
+      "was removed",
+      "was removed",
+      "was removed",
+      "was removed",
+      "Unsafe",
+      "Unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/lodash-4.17.15/perf/perf.js",
+    "matches": [
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/lodash-4.17.15/vendor/backbone/backbone.js",
+    "matches": [
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/lodash-4.17.15/vendor/firebug-lite/src/firebug-lite-debug.js",
+    "matches": [
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecated",
+      "obsolete",
+      "will be replaced",
+      "has been deleted"
+    ]
+  },
+  {
+    "file": "./projects/lodash-4.17.15/vendor/json-js/json2.js",
+    "matches": [
+      "will be replaced"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/meteor/moment.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "will be removed",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/min/moment-with-locales.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "will be removed",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/min/moment-with-locales.min.js",
+    "matches": [
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/min/moment.min.js",
+    "matches": [
+      "will be removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/min/tests.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "will be removed",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/moment.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "will be removed",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/create/from-string.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/duration/prototype.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/locale/locale.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/locale/locales.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/moment/add-subtract.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/moment/locale.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/moment/min-max.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/moment/prototype.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/lib/utils/deprecate.js",
+    "matches": [
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/locale/ms-my.js",
+    "matches": [
+      "DEPRECATED"
+    ]
+  },
+  {
+    "file": "./projects/moment-2.24.0/src/test/moment/deprecate.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/node-fs-extra-2.1.2/lib/copy/ncp.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/node-fs-extra-2.1.2/lib/copy-sync/copy-sync.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/prop-types-15.7.2/factoryWithTypeCheckers.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/devtools/regression/shared.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/dom/public/renderer.js",
+    "matches": [
+      "was moved",
+      "was renamed",
+      "was renamed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/dom/src/__tests__/nested-act-test.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/dom/src/__tests__/wrong-act-test.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/expiration/src/index.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/ssr/src/components/Chrome.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/ssr/src/index.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/tracing/script.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/tracing/test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/fixtures/unstable-async/time-slicing/src/index.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/babel-plugin-react-jsx/src/TransformJSXToReactBabelPlugin.js",
+    "matches": [
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/create-subscription/src/__tests__/createSubscription-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/eslint-plugin-react-hooks/__tests__/ESLintRuleExhaustiveDeps-test.js",
+    "matches": [
+      "was moved"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/jest-mock-scheduler/npm/index.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/jest-react/src/JestReact.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/legacy-events/TopLevelEventTypes.js",
+    "matches": [
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/legacy-events/__tests__/ResponderEventPlugin-test.internal.js",
+    "matches": [
+      "Unstable",
+      "unstable",
+      "Unstable",
+      "was moved"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/React.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/ReactBaseClasses.js",
+    "matches": [
+      "Deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/ReactContext.js",
+    "matches": [
+      "will be removed",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/ReactElement.js",
+    "matches": [
+      "deprecate",
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/ReactElementValidator.js",
+    "matches": [
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/ReactHooks.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactContextValidator-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactDOMTracing-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactES6Class-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactElementJSX-test.internal.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactElementValidator-test.internal.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactProfiler-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "Unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactProfilerDOM-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactProfilerDevToolsIntegration-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/ReactStrictMode-test.internal.js",
+    "matches": [
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "unsafe",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/createReactClassIntegration-test.internal.js",
+    "matches": [
+      "has been renamed",
+      "has been renamed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/createReactClassIntegration-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "deprecated",
+      "Unsafe",
+      "unsafe",
+      "has been renamed",
+      "has been renamed",
+      "has been renamed",
+      "deprecated",
+      "Unsafe",
+      "unsafe",
+      "has been renamed",
+      "has been renamed",
+      "has been renamed",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "has been renamed",
+      "has been renamed",
+      "has been renamed",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react/src/__tests__/forwardRef-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-art/src/__tests__/ReactART-test.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-cache/src/LRU.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-cache/src/ReactCache.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-cache/src/__tests__/ReactCache-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-debug-tools/src/__tests__/ReactDevToolsHooksIntegration-test.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-debug-tools/src/__tests__/ReactHooksInspection-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-debug-tools/src/__tests__/ReactHooksInspectionIntegration-test.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-core/src/standalone.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-extensions/src/main.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/__tests__/profilingCache-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/__tests__/profilingCharts-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/__tests__/profilingCommitTreeBuilder-test.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/__tests__/storeStressTestConcurrent-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/__tests__/utils.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/backend/renderer.js",
+    "matches": [
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED",
+      "unsafe",
+      "DEPRECATED",
+      "DEPRECATED",
+      "DEPRECATED"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/devtools/store.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/devtools/views/Components/InspectedElementContext.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/devtools/views/Components/NativeStyleEditor/StyleEditor.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/devtools/views/Components/NativeStyleEditor/context.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/devtools/views/Components/TreeContext.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "has been removed",
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/devtools/views/Profiler/ProfilerContext.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/node_modules/react-window/dist/index-dev.umd.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/node_modules/react-window/dist/index.cjs.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "deprecated",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/node_modules/react-window/dist/index.esm.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "deprecated",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/node_modules/react-window/src/FixedSizeList.js",
+    "matches": [
+      "Deprecate",
+      "Deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/node_modules/react-window/src/VariableSizeList.js",
+    "matches": [
+      "Deprecate",
+      "Deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/node_modules/react-window/src/createGridComponent.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shared/src/node_modules/react-window/src/createListComponent.js",
+    "matches": [
+      "Deprecate",
+      "deprecated",
+      "deprecated",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "Deprecate",
+      "deprecated",
+      "Deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shell/src/app/InteractionTracing/index.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shell/src/app/PriorityLevels/index.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shell/src/app/index.js",
+    "matches": [
+      "unstable",
+      "Unsafe",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-devtools-shell/src/devtools.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/npm/unstable-fizz.browser.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/npm/unstable-fizz.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/npm/unstable-fizz.node.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/npm/unstable-native-dependencies.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactComponentLifeCycle-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "Unsafe",
+      "has been renamed",
+      "has been renamed",
+      "has been renamed",
+      "deprecated",
+      "Unsafe",
+      "has been renamed",
+      "has been renamed",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "deprecated",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "unsafe",
+      "has been renamed",
+      "has been renamed",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "unsafe",
+      "has been renamed",
+      "Unsafe",
+      "unsafe",
+      "has been renamed",
+      "deprecated",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "unsafe",
+      "has been renamed",
+      "has been renamed",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "unsafe",
+      "has been renamed",
+      "Unsafe",
+      "unsafe",
+      "has been renamed",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "has been renamed",
+      "has been renamed",
+      "has been renamed",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactCompositeComponent-test.js",
+    "matches": [
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactCompositeComponentState-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMComponent-test.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMFiber-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "deprecated",
+      "will be removed",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMFiberAsync-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMFizzServerBrowser-test.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMFizzServerNode-test.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMHooks-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMRoot-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerIntegrationLegacyContext-test.js",
+    "matches": [
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerIntegrationLegacyContextDisabled-test.internal.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerIntegrationSpecialTypes-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerIntegrationUntrustedURL-test.internal.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerLifecycles-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "has been renamed",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "has been renamed",
+      "deprecated",
+      "has been renamed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerPartialHydration-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerSelectiveHydration-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMServerSuspense-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDOMSuspensePlaceholder-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactDeprecationWarnings-test.internal.js",
+    "matches": [
+      "will be removed",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactErrorBoundaries-test.internal.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactFunctionComponent-test.js",
+    "matches": [
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactLegacyContextDisabled-test.internal.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactLegacyErrorBoundaries-test.internal.js",
+    "matches": [
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactMount-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactMultiChild-test.js",
+    "matches": [
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactServerRendering-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactServerRenderingHydration-test.js",
+    "matches": [
+      "has been renamed",
+      "has been renamed",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactTestUtils-test.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactTestUtilsAct-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactUnmockedSchedulerWarning-test.internal.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactUnmockedSchedulerWarning-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/ReactUpdates-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/findDOMNode-test.js",
+    "matches": [
+      "UNSAFE",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/__tests__/renderSubtreeIntoContainer-test.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/client/ReactDOM.js",
+    "matches": [
+      "Unstable",
+      "was removed",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "Unstable",
+      "Unstable",
+      "unstable",
+      "deprecated",
+      "will be removed",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "Unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/client/ReactDOMTextarea.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/client/ToStringValue.js",
+    "matches": [
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/client/__tests__/trustedTypes-test.internal.js",
+    "matches": [
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/client/setInnerHTML.js",
+    "matches": [
+      "Unsafe",
+      "Unsafe",
+      "Unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/BeforeInputEventPlugin.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/DOMEventResponderSystem.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/DOMTopLevelEventTypes.js",
+    "matches": [
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/ReactDOMEventListener.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/ReactDOMEventReplaying.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/SyntheticKeyboardEvent.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/__tests__/ChangeEventPlugin-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/__tests__/DOMEventResponderSystem-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/__tests__/SimpleEventPlugin-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "was removed",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/events/getEventKey.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/server/ReactPartialRenderer.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated",
+      "UNSAFE",
+      "Deprecated",
+      "Deprecated",
+      "has been renamed",
+      "unsafe",
+      "Deprecated",
+      "Unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/shared/createMicrosoftUnsafeLocalFunction.js",
+    "matches": [
+      "unsafe",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/shared/dangerousStyleValue.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/shared/sanitizeURL.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/test-utils/ReactTestUtils.js",
+    "matches": [
+      "Unstable",
+      "Deprecated",
+      "Deprecated",
+      "Deprecated",
+      "deprecated",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/src/test-utils/ReactTestUtilsAct.js",
+    "matches": [
+      "Unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/unstable-fizz.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-dom/unstable-native-dependencies.js",
+    "matches": [
+      "unstable",
+      "Unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/accessibility/src/FocusList.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/accessibility/src/FocusTable.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/accessibility/src/TabbableScope.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/accessibility/src/__tests__/FocusTable-test.internal.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/ContextMenu.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Drag.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Focus.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Hover.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Input.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Keyboard.js",
+    "matches": [
+      "deprecated",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/PressLegacy.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Scroll.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Swipe.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/Tap.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/__tests__/Input-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/dom/__tests__/MixedResponders-test-internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-interactions/events/src/rn/Press.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-is/src/ReactIs.js",
+    "matches": [
+      "deprecated",
+      "Deprecated",
+      "deprecated",
+      "Deprecated",
+      "Deprecated",
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/NativeMethodsMixin.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated",
+      "deprecated",
+      "will be removed",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/ReactFabricEventResponderSystem.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/ReactNativeComponent.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated",
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/ReactNativeEventEmitter.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/ReactNativeFiberHostComponent.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated",
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/ReactNativeRenderer.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/ReactNativeTypes.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/__tests__/ReactFabric-test.internal.js",
+    "matches": [
+      "Deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-native-renderer/src/__tests__/ReactNativeMount-test.internal.js",
+    "matches": [
+      "deprecated",
+      "will be removed",
+      "Deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-noop-renderer/src/createReactNoop.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactChildFiber.js",
+    "matches": [
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberBeginWork.js",
+    "matches": [
+      "will be removed",
+      "unstable",
+      "has been removed",
+      "unstable",
+      "will be removed",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberClassComponent.js",
+    "matches": [
+      "Deprecated",
+      "unstable",
+      "unstable",
+      "Unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "Deprecated",
+      "Unsafe",
+      "Unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberCommitWork.js",
+    "matches": [
+      "unstable",
+      "was deleted"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberCompleteWork.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberContext.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberDevToolsHook.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberEvents.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberReconciler.js",
+    "matches": [
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberRoot.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberSuspenseComponent.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactFiberWorkLoop.js",
+    "matches": [
+      "Deprecated",
+      "unstable",
+      "unstable",
+      "deprecated",
+      "Deprecated",
+      "Unsafe",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactProfilerTimer.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/ReactStrictModeWarnings.js",
+    "matches": [
+      "Unsafe",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "has been renamed",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/SchedulerWithReactIntegration.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ErrorBoundaryReconciliation-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactBatchedMode-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactDisableSchedulerTimeoutBasedOnReactExpirationTime-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactExpiration-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactFiberFundamental-test.internal.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactHooks-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactHooksWithNoopRenderer-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncremental-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalErrorHandling-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalErrorLogging-test.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalPerf-test.internal.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalReflection-test.internal.js",
+    "matches": [
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalScheduling-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalSideEffects-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalTriangle-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactIncrementalUpdates-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactLazy-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "UNSAFE",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactMemo-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactNewContext-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "will be removed",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "will be removed",
+      "will be removed",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactSchedulerIntegration-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactScope-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactSuspense-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactSuspenseCallback-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactSuspenseList-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactSuspensePlaceholder-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-reconciler/src/__tests__/ReactSuspenseWithNoopRenderer-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "deprecated",
+      "unstable",
+      "has been removed",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-refresh/src/__tests__/ReactFresh-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-refresh/src/__tests__/ReactFreshIntegration-test.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/ReactShallowRenderer.js",
+    "matches": [
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE",
+      "Unsafe",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/ReactTestRenderer.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/ReactTestRendererAct.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/__tests__/ReactShallowRenderer-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/__tests__/ReactShallowRendererMemo-test.js",
+    "matches": [
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "deprecated",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE",
+      "UNSAFE"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/__tests__/ReactTestRenderer-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/__tests__/ReactTestRendererAct-test.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/react-test-renderer/src/__tests__/ReactTestRendererAsync-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/npm/umd/scheduler-tracing.development.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/npm/umd/scheduler-tracing.production.min.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/npm/umd/scheduler-tracing.profiling.min.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/npm/umd/scheduler.development.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/npm/umd/scheduler.production.min.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/npm/umd/scheduler.profiling.min.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/npm/unstable_mock.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/Scheduler.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/Tracing.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/TracingSubscriptions.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/Scheduler-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/SchedulerBrowser-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/SchedulerNoDOM-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/SchedulerProfiling-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/SchedulerRAFOld-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/Tracing-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/Tracing-test.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/__tests__/TracingSubscriptions-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/src/forks/SchedulerHostConfig.mock.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/scheduler/unstable_mock.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/ReactFeatureFlags.js",
+    "matches": [
+      "deprecated",
+      "unsafe",
+      "Deprecated",
+      "unstable",
+      "Deprecated",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/ReactSymbols.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/ReactTypes.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/ReactFeatureFlags.native-fb.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/ReactFeatureFlags.native-oss.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/ReactFeatureFlags.persistent.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/ReactFeatureFlags.test-renderer.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/ReactFeatureFlags.test-renderer.www.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/ReactFeatureFlags.www.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/Scheduler.umd.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/shared/forks/SchedulerTracing.umd.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/packages/use-subscription/src/__tests__/useSubscription-test.internal.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/flow/environment.js",
+    "matches": [
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/jest/matchers/reactTestMatchers.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/jest/matchers/schedulerTestMatchers.js",
+    "matches": [
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/jest/setupHostConfigs.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/jest/setupTests.build.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/jest/setupTests.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/release/utils.js",
+    "matches": [
+      "will be replaced"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/rollup/bundles.js",
+    "matches": [
+      "unstable",
+      "Unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/rollup/forks.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/rollup/modules.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/rollup/shims/facebook-www/renderSubtreeIntoContainer_DO_NOT_USE.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/react-16.10.2/scripts/shared/inlinedHostConfigs.js",
+    "matches": [
+      "unstable",
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/request-2.88.1/request.js",
+    "matches": [
+      "DEPRECATED",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/request-2.88.1/tests/test-errors.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/request-2.88.1/tests/test-proxy.js",
+    "matches": [
+      "will be deleted"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/src/assets/js/prettify.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/processors/computeStability.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/processors/computeStability.spec.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/processors/generateApiListDoc.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/processors/generateApiListDoc.spec.js",
+    "matches": [
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/processors/generateDeprecationsListDoc.js",
+    "matches": [
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/processors/migrateLegacyJSDocTags.js",
+    "matches": [
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/tag-defs/deprecated.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/tag-defs/howToUse.js",
+    "matches": [
+      "deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/tag-defs/stable.js",
+    "matches": [
+      "deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-api-package/tag-defs/whatItDoes.js",
+    "matches": [
+      "deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/angular-base-package/post-processors/add-image-dimensions.spec.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/authors-package/watchr.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/links-package/index.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/links-package/services/disambiguators/disambiguateByDeprecated.js",
+    "matches": [
+      "Deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/rxjs-6.5.3/docs_app/tools/transforms/links-package/services/disambiguators/disambiguateByDeprecated.spec.js",
+    "matches": [
+      "Deprecated",
+      "Deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "Deprecated",
+      "deprecated",
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/underscore-1.9.1/test/vendor/qunit.js",
+    "matches": [
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/dist/vue.common.dev.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved",
+      "has been removed",
+      "has been removed",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/dist/vue.esm.browser.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved",
+      "has been removed",
+      "has been removed",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/dist/vue.esm.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved",
+      "has been removed",
+      "has been removed",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/dist/vue.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved",
+      "has been removed",
+      "has been removed",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/dist/vue.runtime.common.dev.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/dist/vue.runtime.esm.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/dist/vue.runtime.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/flow/compiler.js",
+    "matches": [
+      "Deprecated"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/flow/weex.js",
+    "matches": [
+      "DEPRECATED"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/packages/vue-server-renderer/basic.js",
+    "matches": [
+      "unsafe",
+      "Unsafe",
+      "unsafe",
+      "Unsafe",
+      "DEPRECATED",
+      "has been removed",
+      "has been removed",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "Unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/packages/vue-server-renderer/build.dev.js",
+    "matches": [
+      "unsafe",
+      "Unsafe",
+      "unsafe",
+      "Unsafe",
+      "DEPRECATED",
+      "has been removed",
+      "has been removed",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "Unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/packages/vue-template-compiler/browser.js",
+    "matches": [
+      "DEPRECATED",
+      "has been removed",
+      "has been removed",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "Unsafe",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/packages/vue-template-compiler/build.js",
+    "matches": [
+      "DEPRECATED",
+      "has been removed",
+      "has been removed",
+      "deprecated",
+      "has been removed",
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/packages/weex-template-compiler/build.js",
+    "matches": [
+      "deprecated",
+      "has been removed",
+      "DEPRECATED",
+      "unsafe",
+      "unsafe",
+      "unsafe",
+      "deprecated",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/packages/weex-vue-framework/factory.js",
+    "matches": [
+      "DEPRECATED",
+      "has been moved"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/packages/weex-vue-framework/index.js",
+    "matches": [
+      "DEPRECATED",
+      "deprecated",
+      "DEPRECATED"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/compiler/parser/index.js",
+    "matches": [
+      "deprecated",
+      "has been removed"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/compiler/to-function.js",
+    "matches": [
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/core/vdom/patch.js",
+    "matches": [
+      "has been moved"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/core/vdom/vnode.js",
+    "matches": [
+      "DEPRECATED"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/web/compiler/modules/class.js",
+    "matches": [
+      "has been removed"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/web/compiler/modules/style.js",
+    "matches": [
+      "has been removed"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/web/runtime/components/transition-group.js",
+    "matches": [
+      "unstable"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/web/server/modules/attrs.js",
+    "matches": [
+      "Unsafe",
+      "Unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/web/server/util.js",
+    "matches": [
+      "unsafe",
+      "Unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/weex/compiler/modules/class.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/weex/compiler/modules/style.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/platforms/weex/entry-framework.js",
+    "matches": [
+      "DEPRECATED",
+      "deprecated",
+      "DEPRECATED"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/src/server/optimizing-compiler/runtime-helpers.js",
+    "matches": [
+      "Unsafe",
+      "Unsafe"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/test/unit/features/options/parent.spec.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/test/unit/modules/compiler/parser.spec.js",
+    "matches": [
+      "has been removed",
+      "has been removed"
+    ]
+  },
+  {
+    "file": "./projects/vue-2.6.10/test/unit/modules/vdom/patch/edge-cases.spec.js",
+    "matches": [
+      "will be replaced"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/.eslintrc.js",
+    "matches": [
+      "unsafe",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/buildin/module.js",
+    "matches": [
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/Chunk.js",
+    "matches": [
+      "was removed",
+      "was removed",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "deprecated",
+      "was removed",
+      "deprecated",
+      "was removed",
+      "will be removed",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/ChunkGroup.js",
+    "matches": [
+      "will be replaced"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/Compilation.js",
+    "matches": [
+      "deprecate",
+      "deprecated",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/Compiler.js",
+    "matches": [
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/ContextModule.js",
+    "matches": [
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved",
+      "deprecate",
+      "deprecated",
+      "has been moved"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/Dependency.js",
+    "matches": [
+      "deprecate",
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/Entrypoint.js",
+    "matches": [
+      "will be replaced"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/Module.js",
+    "matches": [
+      "was removed",
+      "was removed",
+      "deprecate",
+      "deprecated",
+      "deprecate",
+      "deprecated",
+      "was removed",
+      "was removed",
+      "deprecate",
+      "deprecated",
+      "was renamed",
+      "deprecate",
+      "deprecated",
+      "was renamed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/NormalModule.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/NormalModuleFactory.js",
+    "matches": [
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/Parser.js",
+    "matches": [
+      "deprecated",
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/WebpackOptionsDefaulter.js",
+    "matches": [
+      "unsafe",
+      "unsafe",
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/WebpackOptionsValidationError.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/dependencies/ContextDependency.js",
+    "matches": [
+      "was removed",
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/dependencies/SystemPlugin.js",
+    "matches": [
+      "deprecated",
+      "will be removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/node/NodeTargetPlugin.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/optimize/LimitChunkCountPlugin.js",
+    "matches": [
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/optimize/MergeDuplicateChunksPlugin.js",
+    "matches": [
+      "has been removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/util/StackedSetMap.js",
+    "matches": [
+      "deprecate",
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/lib/webpack.js",
+    "matches": [
+      "has been removed",
+      "has been removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/test/Chunk.unittest.js",
+    "matches": [
+      "was removed",
+      "was removed",
+      "was removed",
+      "was removed"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/test/Errors.test.js",
+    "matches": [
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/test/Examples.test.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/test/StatsTestCases.test.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/test/browsertest/middlewareTest.js",
+    "matches": [
+      "unsafe"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/test/cases/parsing/issue-494/index.js",
+    "matches": [
+      "deprecate"
+    ]
+  },
+  {
+    "file": "./projects/webpack-4.41.0/test/configCases/parsing/system.import/warnings.js",
+    "matches": [
+      "deprecated"
+    ]
+  },
+  {
+    "file": "./projects/yargs-14.2.0/yargs.js",
+    "matches": [
+      "deprecate",
+      "deprecate",
+      "deprecated",
+      "Deprecated",
+      "deprecated",
+      "will be removed"
+    ]
+  }
+]
