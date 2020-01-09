@@ -61,3 +61,6 @@ typings/
 .next
 
 /projects/
+/projects_test/
+*.json
+*.csv
