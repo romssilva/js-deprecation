@@ -1,9 +1,24 @@
 const axios = require('axios')
 const { parse } = require('node-html-parser')
+const cmd = require('node-cmd')
+
+const search = require('./search')
 
 const AMOUNT_OF_PROJECTS = 100
 
 let projects = []
+
+const runCmd = async (cmmd, callback = () => null) => {
+    return new Promise((res, rej) => {
+        cmd.get(cmmd, (err, data, stderr) => {
+            if (err) {
+                rej(callback.apply(null, [err, data, stderr]))
+            } else {
+                res(callback.apply(null, [err, data, stderr]))
+            }
+        })
+    })
+}
 
 const fetchProjects = async () => {
     while(projects.length < AMOUNT_OF_PROJECTS) {
@@ -19,6 +34,70 @@ const fetchProjects = async () => {
         })
         projects = [...projects, ...newProjects]
     }
+
+    console.log(`----- Fetched ${projects.length} projects from npm -----`)
+
+    const folderName = 'npm'
+
+    await runCmd(`rm -rf ${folderName}`, (err, data, stderr) => {
+        console.log(`----- Deleted ${folderName} folder -----`)
+    })
+
+    await runCmd(`mkdir ${folderName}`, (err, data, stderr) => {
+        console.log(`----- Created ${folderName} folder -----`)
+    })
+    
+    let projectsDownloadCount = 0
+    const downloadErrors = []
+    
+    for (let i = 0; i < projects.length; i++) {
+        let project = projects[i]
+        console.log(`Starting ${project.name} download.`)
+        
+        await runCmd(
+            `npm install ${project.name} -g --prefix ./npm`,
+            (err, data, stderr) => {
+                if(err) {
+                    downloadErrors.push({
+                        project,
+                        err
+                    })
+                    console.log(`
+
+                    ----- Error on ${project.name} -----
+
+                    ${err}
+
+                    `)
+                    return
+                }
+                if (data) {
+                    console.log(`${data}
+                        ----- Download complete: ${project.name} -----                        
+                    `)
+                    projectsDownloadCount++
+                }
+                if (stderr) {
+                    console.log(`stderr: ${stderr}`)
+                }
+            }
+        )
+        console.log(`
+            ${projectsDownloadCount} projects downloaded so far.
+        `)
+    }
+    console.log(downloadErrors)
 }
 
-fetchProjects()
+// fetchProjects()
+const PATH = './npm/lib/node_modules'
+const fileCount = search.jsFilesCount(PATH)
+const occurencies = search.keywordsSearch(PATH)
+const occurenciesASTS = search.searchOccurences(occurencies)
+const projectsInfo = search.projectsOccurencies(occurencies, occurenciesASTS.occurrenciesMap)
+
+console.log(`${occurencies.length} files of ${fileCount} found.`)
+console.log(occurenciesASTS.occurrenciesMap)
+console.log(`Total of ${Array.from(occurenciesASTS.occurrenciesMap.values()).reduce((a, b) => a + b, 0)} occurrencies.`)
+console.log(`Failed parsing ${occurenciesASTS.errorFiles.length} files.`)
+console.log(projectsInfo)

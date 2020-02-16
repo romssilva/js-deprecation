@@ -43,7 +43,7 @@ const getAST = rootPath => {
     return ASTs;
 }
 
-const keywordsSearch = rootPath => {
+const keywordsSearch = (rootPath, regex = REGEX) => {
     const keywordsOcurrencies = [];
     const files = getFilesFromDirectory(rootPath)
     files.map(file => {
@@ -52,7 +52,7 @@ const keywordsSearch = rootPath => {
         } else if (isJSFile(file.path)) {
             console.log(`Searching any keywords in ${file.path}`)
             const fileContent = getFileContent(file.path)
-            const keywordsOcurrency = fileContent.match(REGEX)
+            const keywordsOcurrency = fileContent.match(regex)
             if (keywordsOcurrency) {
                 keywordsOcurrencies.push({
                     file: file.path,
@@ -196,4 +196,8 @@ if (WRITE) {
         if (err) console.log(err);
         console.log(`Done! Projects csv file saved!`);
     })
+}
+
+module.exports = {
+    keywordsSearch
 }

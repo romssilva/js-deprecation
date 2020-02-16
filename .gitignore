@@ -64,3 +64,4 @@ typings/
 /projects_test/
 *.json
 *.csv
+/npm/
