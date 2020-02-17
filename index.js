@@ -1,10 +1,11 @@
 const axios = require('axios')
 const { parse } = require('node-html-parser')
 const cmd = require('node-cmd')
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const search = require('./search')
 
-const AMOUNT_OF_PROJECTS = 100
+const AMOUNT_OF_PROJECTS = 30
 
 let projects = []
 
@@ -20,6 +21,36 @@ const runCmd = async (cmmd, callback = () => null) => {
     })
 }
 
+const writeToCSV = async (path, header, records) => {
+    const csvWriter = createCsvWriter({
+        path, 
+        header,
+    });
+    csvWriter.writeRecords(records)
+}
+
+const parseProjects = () => {
+    const PATH = './npm/node_modules'
+    const fileCount = search.jsFilesCount(PATH)
+
+    const occurencies = search.keywordsSearch(PATH)
+    writeToCSV(`csv/ocurrencies/ocurrencies_${new Date().getTime()}.csv`, [
+        {id: 'file', title: 'FILE PATH'},
+        {id: 'matches', title: 'MATCHES'}
+    ], occurencies)
+    
+    const occurenciesASTS = search.searchOccurences(occurencies)
+    const projectsInfo = search.projectsOccurencies(occurencies, occurenciesASTS.occurrenciesMap)
+    
+    console.log(`${occurencies.length} files of ${fileCount} found.`)
+    console.log(occurenciesASTS.occurrenciesMap)
+    console.log(`Total of ${Array.from(occurenciesASTS.occurrenciesMap.values()).reduce((a, b) => a + b, 0)} occurrencies.`)
+    console.log(`Failed parsing ${occurenciesASTS.errorFiles.length} files.`)
+    console.log(projectsInfo)
+    console.log(occurenciesASTS.occurrencies)
+
+} 
+
 const fetchProjects = async () => {
     while(projects.length < AMOUNT_OF_PROJECTS) {
         const offset = projects.length
@@ -34,6 +65,8 @@ const fetchProjects = async () => {
         })
         projects = [...projects, ...newProjects]
     }
+
+    projects = projects.splice(0, AMOUNT_OF_PROJECTS)
 
     console.log(`----- Fetched ${projects.length} projects from npm -----`)
 
@@ -71,14 +104,14 @@ const fetchProjects = async () => {
                     `)
                     return
                 }
+                if (stderr) {
+                    console.log(`stderr: ${stderr}`)
+                }
                 if (data) {
                     console.log(`${data}
                         ----- Download complete: ${project.name} -----                        
                     `)
                     projectsDownloadCount++
-                }
-                if (stderr) {
-                    console.log(`stderr: ${stderr}`)
                 }
             }
         )
@@ -86,18 +119,14 @@ const fetchProjects = async () => {
             ${projectsDownloadCount} projects downloaded so far.
         `)
     }
-    console.log(downloadErrors)
+    console.log('Download Errors', downloadErrors)
+
 }
 
-// fetchProjects()
-const PATH = './npm/lib/node_modules'
-const fileCount = search.jsFilesCount(PATH)
-const occurencies = search.keywordsSearch(PATH)
-const occurenciesASTS = search.searchOccurences(occurencies)
-const projectsInfo = search.projectsOccurencies(occurencies, occurenciesASTS.occurrenciesMap)
+const init = async () => {
+    // await fetchProjects()
+    parseProjects()
+}
 
-console.log(`${occurencies.length} files of ${fileCount} found.`)
-console.log(occurenciesASTS.occurrenciesMap)
-console.log(`Total of ${Array.from(occurenciesASTS.occurrenciesMap.values()).reduce((a, b) => a + b, 0)} occurrencies.`)
-console.log(`Failed parsing ${occurenciesASTS.errorFiles.length} files.`)
-console.log(projectsInfo)
+console.log('Starting...')
+init()

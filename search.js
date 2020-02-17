@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path')
 const esprima = require('esprima');
+const flowParser = require('flow-parser');
 
 const REGEX = /(@deprecated|deprecated|deprecate)/gmi
 
@@ -92,7 +93,7 @@ const searchOccurences = keywordsOcurrencies => {
         console.log(`Parsing file ${index+1} of ${array.length}`)
         const fileContent = getFileContent(keywordsOcurrency.file)
         try {
-            const AST = esprima.parseModule(fileContent, {comment: true, jsx: true})
+            const AST = flowParser.parse(fileContent, {})
             const locations = searchLocations(AST)
             ASTs.push({
                 filePath: keywordsOcurrency.file,
@@ -103,10 +104,21 @@ const searchOccurences = keywordsOcurrencies => {
             errorFiles.push(keywordsOcurrency.file)
         }
     })
+    const occurrencies = Array.from(occurrenciesMap.keys()).map(project => { 
+        const occurrency = {
+            project
+        }
+        Array.from(occurrenciesMap.get(project).keys()).map(occ => {
+            occurrency[occ] = occurrenciesMap.get(project).get(occ)
+        })
+        return occurrency
+    })
+
     return {
         occurrenciesMap,
         ASTs,
-        errorFiles
+        errorFiles,
+        occurrencies
     }
 }
 
@@ -114,7 +126,7 @@ const projectsOccurencies = (keywordsOcurrencies, occurrenciesMap) => {
     const projectOccurrenciesMap = new Map()
     keywordsOcurrencies.map((keywordsOcurrency, index, array) => {
         let project = ''
-        const projectName = keywordsOcurrency.file.substring(23)
+        const projectName = keywordsOcurrency.file.substring(19)
         // if (projectName.indexOf('@') == 0) {
         //     project = projectName.substring(0, projectName.indexOf('/', projectName.indexOf('/') + 1))
         // } else {
