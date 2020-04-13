@@ -5,7 +5,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const search = require('./search')
 
-const AMOUNT_OF_PROJECTS = 30
+const AMOUNT_OF_PROJECTS = 100
 
 let projects = []
 
@@ -26,11 +26,11 @@ const writeToCSV = async (path, header, records) => {
         path, 
         header,
     });
-    csvWriter.writeRecords(records)
+    csvWriter.writeRecords(records).then(res => console.log(`Wrote ${path}!`))
 }
 
 const parseProjects = () => {
-    const PATH = './npm/node_modules'
+    const PATH = './npm/lib/node_modules'
     const fileCount = search.jsFilesCount(PATH)
 
     const occurencies = search.keywordsSearch(PATH)
@@ -41,13 +41,24 @@ const parseProjects = () => {
     
     const occurenciesASTS = search.searchOccurences(occurencies)
     const projectsInfo = search.projectsOccurencies(occurencies, occurenciesASTS.occurrenciesMap)
+    writeToCSV(`csv/projects/projects_${new Date().getTime()}.csv`, [
+        {id: 'project', title: 'PROJECT'},
+        {id: '@deprecated', title: '@deprecated'},
+        {id: 'deprecated', title: 'deprecated'},
+        {id: 'deprecate', title: 'deprecate'}
+    ], projectsInfo)
     
     console.log(`${occurencies.length} files of ${fileCount} found.`)
     console.log(occurenciesASTS.occurrenciesMap)
     console.log(`Total of ${Array.from(occurenciesASTS.occurrenciesMap.values()).reduce((a, b) => a + b, 0)} occurrencies.`)
     console.log(`Failed parsing ${occurenciesASTS.errorFiles.length} files.`)
-    console.log(projectsInfo)
-    console.log(occurenciesASTS.occurrencies)
+    occurenciesASTS.ASTs.map(ast => ast.locations.map(loc => {
+        if (loc.loc) {
+            // console.log(loc.loc)
+        } else {
+            console.log(loc)
+        }
+    }))
 
 } 
 

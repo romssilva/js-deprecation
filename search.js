@@ -104,21 +104,11 @@ const searchOccurences = keywordsOcurrencies => {
             errorFiles.push(keywordsOcurrency.file)
         }
     })
-    const occurrencies = Array.from(occurrenciesMap.keys()).map(project => { 
-        const occurrency = {
-            project
-        }
-        Array.from(occurrenciesMap.get(project).keys()).map(occ => {
-            occurrency[occ] = occurrenciesMap.get(project).get(occ)
-        })
-        return occurrency
-    })
 
     return {
         occurrenciesMap,
         ASTs,
-        errorFiles,
-        occurrencies
+        errorFiles
     }
 }
 
@@ -126,7 +116,7 @@ const projectsOccurencies = (keywordsOcurrencies, occurrenciesMap) => {
     const projectOccurrenciesMap = new Map()
     keywordsOcurrencies.map((keywordsOcurrency, index, array) => {
         let project = ''
-        const projectName = keywordsOcurrency.file.substring(19)
+        const projectName = keywordsOcurrency.file.substring(23)
         // if (projectName.indexOf('@') == 0) {
         //     project = projectName.substring(0, projectName.indexOf('/', projectName.indexOf('/') + 1))
         // } else {
@@ -143,7 +133,16 @@ const projectsOccurencies = (keywordsOcurrencies, occurrenciesMap) => {
             projectOccurrenciesMap.get(project).set(lowerCaseMatch, projectOccurrenciesMap.get(project).get(lowerCaseMatch) + 1)
         })
     })
-    return projectOccurrenciesMap
+    const projectsOccurencies = Array.from(projectOccurrenciesMap.keys()).map(project => {
+        const projects = {
+            project
+        }
+        Array.from(projectOccurrenciesMap.get(project).keys()).map(occ => {
+            projects[occ] = projectOccurrenciesMap.get(project).get(occ)
+        })
+        return projects
+    })
+    return projectsOccurencies
 }
 
 module.exports = {
