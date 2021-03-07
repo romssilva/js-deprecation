@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node --max-old-space-size=4096 index.js",
     "test": "node test.js"
   },
   "repository": {
@@ -20,12 +20,15 @@
   "homepage": "https://github.com/romssilva/js-deprecation#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "axios-retry": "^3.1.9",
     "bower": "^1.8.8",
     "csv-writer": "^1.6.0",
     "csvtojson": "^2.0.10",
     "esprima": "^4.0.1",
+    "estraverse": "^5.2.0",
     "flow-parser": "^0.118.0",
     "node-cmd": "^3.0.0",
-    "node-html-parser": "^1.2.1"
+    "node-html-parser": "^1.2.1",
+    "recast": "^0.20.4"
   }
 }
