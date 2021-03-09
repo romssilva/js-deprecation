@@ -14,7 +14,6 @@ const isMinFile = filePath => {
     const pathParts = filePath.split('/')
     const fileName = pathParts[pathParts.length - 1]
     const isMinFile = fileName.indexOf('.min.js') > -1
-    if (isMinFile) console.log(fileName)
     return isMinFile
 }
 
@@ -265,8 +264,8 @@ const comments = rootPath => {
             const AST = flowParser.parse(fileContent, {})
             
             const commentsWithOccurrences = AST.comments.filter(({ value }) => {
-                const commentWithNoJSDoc = value.replace('@deprecate', '')
-                return commentWithNoJSDoc.indexOf('deprecat') > -1
+                const commentWithNoJSDoc = value.replace('@deprecate', '').replace('@Deprecate', '')
+                return commentWithNoJSDoc.toLowerCase().indexOf('deprecat') > -1
             })
 
             if (commentsWithOccurrences.length) {

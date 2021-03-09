@@ -68,8 +68,8 @@ const writeToCSV = async (path, header, records) => {
 }
 
 const parseProjects = () => {
-    const NPM_PATH = './npm/lib/node_modules/bluebird'
-    // const NPM_PATH = './npm/lib/node_modules'
+    // const NPM_PATH = './npm/lib/node_modules/element-ui'
+    const NPM_PATH = './npm/lib/node_modules'
     // const GIT_PATH = './git'
     // const fileCount = search.jsFilesCount(NPM_PATH)
     
@@ -135,7 +135,6 @@ const parseProjects = () => {
 
     })
 
-    // const locations = search.keywordsSearch('./npm/lib/node_modules/axios/lib/helpers/')
     const locations = search.keywordsSearch(NPM_PATH)
     const filesContent = locations.map(location => ({
         file: location.file,
@@ -155,34 +154,26 @@ const parseProjects = () => {
         recast.visit(ast, {
             visitCallExpression(path){
                 // Chamadas diretas de console
-                const calleeObjectName = path.node.callee && path.node.callee.object && path.node.callee.object.name
-                if (calleeObjectName == 'console') {
+                const calleeObjectConsoleName = path.node.callee && path.node.callee.object && path.node.callee.object.name
+                if (calleeObjectConsoleName == 'console') {
                     recast.visit(path, {
                         visitLiteral(path){
-                            const literalValue = path.node.value && path.node.value.toLocaleLowerCase ? path.node.value.toLocaleLowerCase() : ''
-                            if (literalValue.indexOf('deprecat') > -1) {
+                            const literalValues = path.node.value && path.node.value.toLocaleLowerCase ? path.node.value.toLowerCase().match(/deprecat/g) : []
+                            literalValues && literalValues.forEach(value => {
                                 consoleMessages.push({
                                     file: visitingFile,
                                     line: path.node.loc.start.line
                                 });
-                            }
+                            })
                             return false;
                         }
                     })
+                    return false;
                 }
-                return false;
-            }
-        })
-    })
 
-    asts.forEach(({ file, ast }) => {
-        console.log(`Searching for utilities occurrences in ${file}.`)
-        visitingFile = file;
-        recast.visit(ast, {
-            visitCallExpression(path){
                 // deprecate('dont use this')
                 const calleeName = path.node.callee && path.node.callee.name || ''
-                if (calleeName.indexOf('deprecat') > -1) {
+                if (calleeName.toLocaleLowerCase().indexOf('deprecat') > -1) {
                     console.log('CallExpression', {
                         file: visitingFile,
                         line: path.node.loc.start.line
@@ -193,66 +184,113 @@ const parseProjects = () => {
                     })
                 }
 
-                // oi.debug.deprecated("calling Promise.try with more than 1 argument");
-                !!calleeName && recast.visit(path.node.callee, {
-                    visitIdentifier(path) {
-                        if (path.node.name.indexOf('deprecat') > -1) {
-                            console.log('CallExpression>MemberExpression>Identifier', {
-                                file: visitingFile,
-                                line: path.node.loc.start.line
-                            })
-                            utilities.push({
-                                file: visitingFile,
-                                line: path.node.loc.start.line
-                            })
-                        }
-                        return false
-                    }
-                })
-
-                const arguments = path.node.arguments && path.node.arguments.filter(param => {
-                    if (param.name && param.name.indexOf('deprecat') > -1) {
-                        return true
-                    }
-
-                    if (param.property && param.property.name && param.property.name.indexOf('deprecat') > -1) {
-                        return true
-                    }
-
-                })
-
-                if (arguments && arguments.length) {
-                    utilities.push({
+                // debug.deprecated("calling Promise.try with more than 1 argument");
+                const calleePropertyName = path.node.callee && path.node.callee.property && path.node.callee.property.name || ''
+                if (calleePropertyName.indexOf && calleePropertyName.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                    console.log('CallExpression>Property', {
                         file: visitingFile,
                         line: path.node.loc.start.line
                     })
-                    console.log('CallExpression>arguments',{
+                    utilities.push({
                         file: visitingFile,
                         line: path.node.loc.start.line
                     })
                 }
 
+                // deprecatedAPIs.hasOwnProperty(fnName)
+                const calleeObjectName = path.node.callee && path.node.callee.object && path.node.callee.object.name || ''
+                if (calleeObjectName.indexOf && calleeObjectName.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                    console.log('CallExpression>Object', {
+                        file: visitingFile,
+                        line: path.node.loc.start.line
+                    })
+                    utilities.push({
+                        file: visitingFile,
+                        line: path.node.loc.start.line
+                    })
+                }
                 
-                // const calleeObjectName = path.node.callee && path.node.callee.object && path.node.callee.object.name
-                // if (calleeObjectName != 'console') {
-                //     recast.visit(path, {
-                //         visitLiteral(path){
-                //             const literalValue = path.node.value && path.node.value.toLocaleLowerCase ? path.node.value.toLocaleLowerCase() : ''
-                //             if (literalValue.indexOf('deprecat') > -1) {
-                //                 utilities.push({
-                //                     file: visitingFile,
-                //                     line: path.node.loc.start.line
-                //                 });
-                //                 console.log('CallExpression>Literal', {
-                //                     file: visitingFile,
-                //                     line: path.node.loc.start.line
-                //                 })
-                //             }
-                //             return false;
-                //         }
-                //     })
-                // }
-                return false;
+                if (path.node.callee.object && path.node.callee.object.type == 'MemberExpression') {
+                    const calleeObject = path.node.callee.object
+                    if (calleeObject.object.name && calleeObject.property.name) {
+                        const objectName = calleeObject.object.name
+                        const propertyName = calleeObject.property.name
+                        if (objectName.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                            console.log(objectName)
+                        }
+                        if (propertyName.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                            console.log(propertyName)
+                        }
+                    }
+                }
+                
+
+                const arguments = path.node.arguments && path.node.arguments.filter(arg => {
+                    // Identifier
+                    if (arg.name && arg.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                        return true
+                    }
+
+                    // xyz.deprecat
+                    if (arg.property && arg.property.name && arg.property.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                        return true
+                    }
+
+                    //deprecat.xyz
+                    if (arg.object && arg.object.name && arg.object.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                        return true
+                    }
+
+                    // String Literal
+                    if (arg.value && arg.value.indexOf && arg.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                        return true
+                    }
+
+                    if (arg.quasis && arg.quasis.length) {
+                        const quasis = arg.quasis.filter(quasi => {
+                            const value = quasi.value.raw || ''
+                            return  value.toLocaleLowerCase().indexOf('deprecat') > -1
+                        })
+
+                        if (quasis.length) {
+                            return true
+                        }
+                    }
+
+                    if (arg.type == 'BinaryExpression') {
+                        recast.visit(arg, {
+                            visitLiteral(path) {
+                                if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                                    console.log('CallExpression>arguments>BinaryExpression', {
+                                        file: visitingFile,
+                                        line: path.node.loc.start.line
+                                    })
+                                    utilities.push({
+                                        file: visitingFile,
+                                        line: path.node.loc.start.line
+                                    })
+                                }
+                                return false
+                            }
+                        })
+                    }
+
+                })
+                
+                if (arguments && arguments.length) {
+                    arguments.forEach(argument => {
+                        utilities.push({
+                            file: visitingFile,
+                            line: path.node.loc.start.line
+                        })
+                        console.log('CallExpression>arguments',{
+                            file: visitingFile,
+                            line: path.node.loc.start.line
+                        })
+                    })
+                }
+
+                this.traverse(path);
             }
         })
     })
@@ -263,27 +301,27 @@ const parseProjects = () => {
         recast.visit(ast, {
             visitVariableDeclarator(path){
                 // Definição de variável em que o nome da função tem 'deprecat', possível util senda definida.
-                const idName = path.node.id.name
+                const idName = path.node.id.name || ''
 
-                if (idName.indexOf('deprecat') > -1) {
+                if (idName.toLocaleLowerCase().indexOf('deprecat') > -1) {
                     utilities.push({
                         file: visitingFile,
                         line: path.node.loc.start.line
                     })
-                    console.log('VariableDeclaration>Identifier', {
+                    console.log('VariableDeclarator>Identifier', {
                         file: visitingFile,
                         line: path.node.loc.start.line
                     })
                 }
                 
-                path.node.init && recast.visit(path.node.init, {
+                path.node.init && path.node.init.type == 'BinaryExpression' && recast.visit(path.node.init, {
                     visitLiteral(path){
-                        if (path.node.value && path.node.value.indexOf && path.node.value.indexOf('deprecat') > -1) {
+                        if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
                             utilities.push({
                                 file: visitingFile,
                                 line: path.node.loc.start.line
                             })
-                            console.log('VariableDeclaration>Init', {
+                            console.log('VariableDeclarator>Init', {
                                 file: visitingFile,
                                 line: path.node.loc.start.line
                             })
@@ -291,7 +329,8 @@ const parseProjects = () => {
                         return false
                     }
                 })
-                return false
+                
+                this.traverse(path);
             }
         })
     })
@@ -303,7 +342,7 @@ const parseProjects = () => {
             visitFunctionDeclaration(path){
                 // Definição de variável em que o nome da função tem 'deprecat', possível util senda definida.
                 // console.log(path.node.id.name)
-                if (path.node.id && path.node.id.name.indexOf('deprecat') > -1) {
+                if (path.node.id && path.node.id.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
                     utilities.push({
                         file: visitingFile,
                         line: path.node.loc.start.line
@@ -313,21 +352,6 @@ const parseProjects = () => {
                         line: path.node.loc.start.line
                     })
                 }
-                // recast.visit(path, {
-                    // visitIdentifier(path){
-                    //     if (path.node.name.indexOf('deprecat') > -1) {
-                    //         utilities.push({
-                    //             file: visitingFile,
-                    //             line: path.node.loc.start.line
-                    //         })
-                    //         console.log('FunctionDeclaration>Identifier',{
-                    //             file: visitingFile,
-                    //             line: path.node.loc.start.line
-                    //         })
-                    //     }
-                    //     return false
-                    // }
-                // })
                 return false
             }
         })
@@ -339,7 +363,7 @@ const parseProjects = () => {
         recast.visit(ast, {
             visitFunctionExpression(path){
                 // Definição de variável em que o nome da função tem 'deprecat', possível util senda definida.
-                if (path.node.id && path.node.id.name.indexOf('deprecat') > -1) {
+                if (path.node.id && path.node.id.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
                     utilities.push({
                         file: visitingFile,
                         line: path.node.loc.start.line
@@ -351,11 +375,11 @@ const parseProjects = () => {
                 }
 
                 const params = path.node.params && path.node.params.filter(param => {
-                    if (param.name && param.name.indexOf('deprecat') > -1) {
+                    if (param.name && param.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
                         return true
                     }
                     
-                    if (param.left && param.left.name && param.left.name.indexOf('deprecat') > -1) {
+                    if (param.left && param.left.name && param.left.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
                         return true
                     }
 
@@ -384,7 +408,7 @@ const parseProjects = () => {
             // Imported elements, possibly utils
             visitImportDefaultSpecifier(path){
                 const localName = path.node.local.name
-                if (localName.indexOf('deprecat') > -1) {
+                if (localName.toLocaleLowerCase().indexOf('deprecat') > -1) {
                     utilities.push({
                         file: visitingFile,
                         line: path.node.loc.start.line
@@ -398,7 +422,7 @@ const parseProjects = () => {
             },
             visitImportSpecifier(path){
                 const importedName = path.node.imported.name
-                if (importedName.indexOf('deprecat') > -1) {
+                if (importedName.toLocaleLowerCase().indexOf('deprecat') > -1) {
                     utilities.push({
                         file: visitingFile,
                         line: path.node.loc.start.line
@@ -421,7 +445,7 @@ const parseProjects = () => {
             visitThrowStatement(path){
                 recast.visit(path, {
                     visitLiteral(path) {
-                        if (path.node.value && path.node.value.indexOf && path.node.value.indexOf('deprecat') > -1) {
+                        if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
                             consoleMessages.push({
                                 file: visitingFile,
                                 line: path.node.loc.start.line
@@ -439,35 +463,61 @@ const parseProjects = () => {
         })
     })
 
-    const allLocations = search.searchAllLocations(NPM_PATH)
-    const allFilesContent = allLocations.map(location => ({
-        file: location.file,
-        content: search.getFileContent(location.file)
-    }))
-    const allAsts = allFilesContent.map(({ file, content }) => ({
-        file,
-        ast: flowParser.parse(content, {})
-    }))
-
-    allAsts.forEach(({ file, ast }) => {
-        // console.log(`Searching for prefixes in ${file}.`)
+    asts.forEach(({ file, ast }) => {
+        console.log(`Searching for ObjectExpression in ${file}.`)
         visitingFile = file;
         recast.visit(ast, {
-            // Prefixes
-            visitIdentifier(path){
-                const index = path.node.name.indexOf('_')
-                if(index > 0) {
-                    const prefix = path.node.name.substring(0, index+1)
-                    identifiers.push({
+            // propriedades de objetos
+            visitObjectExpression(path) {
+                const props = path.node.properties.filter(prop => {
+                    return prop.key && typeof prop.key.name == "string" && prop.key.name.toLocaleLowerCase().indexOf('deprecat') > -1
+                })
+
+                props.forEach(prop => {
+                    utilities.push({
                         file: visitingFile,
-                        prefix
+                        line: path.node.loc.start.line
                     })
-                    identifiersCount[prefix] = identifiersCount[prefix] ? identifiersCount[prefix] + 1 : 1
-                }
+                    console.log('ObjectExpression>Property',{
+                        file: visitingFile,
+                        line: path.node.loc.start.line
+                    })
+                })
+                
                 return false
             }
         })
     })
+
+    // const allLocations = search.searchAllLocations(NPM_PATH)
+    // const allFilesContent = allLocations.map(location => ({
+    //     file: location.file,
+    //     content: search.getFileContent(location.file)
+    // }))
+    // const allAsts = allFilesContent.map(({ file, content }) => ({
+    //     file,
+    //     ast: flowParser.parse(content, {})
+    // }))
+
+    // allAsts.forEach(({ file, ast }) => {
+    //     // console.log(`Searching for prefixes in ${file}.`)
+    //     visitingFile = file;
+    //     recast.visit(ast, {
+    //         // Prefixes
+    //         visitIdentifier(path){
+    //             const index = path.node.name.indexOf('_')
+    //             if(index > 0) {
+    //                 const prefix = path.node.name.substring(0, index+1)
+    //                 identifiers.push({
+    //                     file: visitingFile,
+    //                     prefix
+    //                 })
+    //                 identifiersCount[prefix] = identifiersCount[prefix] ? identifiersCount[prefix] + 1 : 1
+    //             }
+    //             return false
+    //         }
+    //     })
+    // })
 
     consoleMessages.forEach(occurrence => {
         const projectName = occurrence.file.split('/')[4]
@@ -481,19 +531,19 @@ const parseProjects = () => {
 
     })
 
-    identifiers.forEach(occurrence => {
-        const projectName = occurrence.file.split('/')[4]
-        if (projects[projectName]) {
-            projects[projectName].prefix[occurrence.prefix] = projects[projectName].prefix[occurrence.prefix] ? projects[projectName].prefix[occurrence.prefix] + 1 : 1
-        }
-    })
+    // identifiers.forEach(occurrence => {
+    //     const projectName = occurrence.file.split('/')[4]
+    //     if (projects[projectName]) {
+    //         projects[projectName].prefix[occurrence.prefix] = projects[projectName].prefix[occurrence.prefix] ? projects[projectName].prefix[occurrence.prefix] + 1 : 1
+    //     }
+    // })
 
-    const identifiersArray = Object.keys(identifiersCount).map(identifierKey => {
-        return {
-            identifier: identifierKey,
-            count: identifiersCount[identifierKey]
-        }
-    }).sort((i1, i2) => i1.count - i2.count)
+    // const identifiersArray = Object.keys(identifiersCount).map(identifierKey => {
+    //     return {
+    //         identifier: identifierKey,
+    //         count: identifiersCount[identifierKey]
+    //     }
+    // }).sort((i1, i2) => i1.count - i2.count)
     
     const projectsArray = Object.keys(projects).map(projectName => ({
         name: projectName,
@@ -509,10 +559,10 @@ const parseProjects = () => {
         {id: 'utility', title: 'utility'}
     ], projectsArray)
 
-    writeToCSV(`csv/prefix/prefix_${new Date().getTime()}.csv`, [
-        {id: 'identifier', title: 'identifier'},
-        {id: 'count', title: 'count'}
-    ], identifiersArray)
+    // writeToCSV(`csv/prefix/prefix_${new Date().getTime()}.csv`, [
+    //     {id: 'identifier', title: 'identifier'},
+    //     {id: 'count', title: 'count'}
+    // ], identifiersArray)
 } 
 
 const fetchProjectList = async () => {
@@ -542,17 +592,89 @@ const fetchProjectList = async () => {
         // })
         
         const projectNames = [
+            'moment',
+            'babel-core',
+            'babel-preset-es2015',
+            'moment-timezone',
+            'gulp-util',
+            'fs',
+            'less',
+            'eslint-loader',
+            'coffee-script',
+            'extract-text-webpack-plugin',
+            'node-uuid',
+            'babel-loader',
+            'eslint',
+            '@angular/core',
+            '@alifd/next',
+            'yeoman-generator',
+            'react-dom',
+            'less-loader',
+            'tslib',
+            'request',
+            '@types/node',
+            'aws-sdk',
+            '@babel/core',
+            'eslint-plugin-react',
+            '@angular/common',
+            'html-webpack-plugin',
+            '@angular/platform-browser',
+            'url-loader',
+            'webpack-dev-server',
+            '@angular/compiler',
+            '@angular/forms',
+            'postcss-loader',
+            'request-promise',
+            '@angular/platform-browser-dynamic',
+            'sass-loader',
+            '@angular/router',
+            '@babel/preset-env',
+            'babel-polyfill',
+            'object-assign',
+            'path',
+            'autoprefixer',
+            'eslint-plugin-jsx-a11y',
+            'cors',
+            'react-scripts',
+            'prettier',
+            '@types/react',
+            '@angular/animations',
+            'yosay',
+            '@angular/http',
+            'babel-jest',
+            'postcss',
+            'mini-css-extract-plugin',
+            '@types/lodash',
+            '@types/express',
+            'react-dev-utils',
+            'case-sensitive-paths-webpack-plugin',
+            'eslint-plugin-flowtype',
+            'babel-preset-react',
+            '@typescript-eslint/parser',
+            'source-map-support',
+            '@babel/polyfill',
+            '@typescript-eslint/eslint-plugin',
+            '@babel/preset-react',
+            'babel-preset-env',
+            'minimatch',
+            'webpack-manifest-plugin',
+            '@babel/plugin-proposal-class-properties',
+            'babel-cli',
+            '@types/react-dom',
+            'react-router',
+            'babel-runtime',
+            'babel-eslint',
+            'css-loader',
+            'style-loader',
+            'eslint-plugin-import',
+            'file-loader',
+            'ember-cli-babel',
             'lodash',
             'react',
             'chalk',
-            'tslib',
-            'request',
             'commander',
             'express',
-            'moment',
             'axios',
-            'react-dom',
-            'prop-types',
             'fs-extra',
             'debug',
             'vue',
@@ -571,41 +693,25 @@ const fetchProjectList = async () => {
             'mkdirp',
             'dotenv',
             'body-parser',
-            '@types/node',
             '@babel/runtime',
             'node-fetch',
             'colors',
             'minimist',
             'jquery',
-            'aws-sdk',
             'semver',
-            'babel-loader',
-            'eslint',
-            'babel-runtime',
             'redux',
-            'css-loader',
             'winston',
             'rimraf',
-            '@babel/core',
             'jsonwebtoken',
             'ora',
-            'style-loader',
             'styled-components',
-            'babel-core',
             'shelljs',
-            'yeoman-generator',
             'react-redux',
             'js-yaml',
             'cheerio',
-            'eslint-plugin-import',
-            '@angular/core',
-            'babel-eslint',
             'through2',
             'ramda',
-            'file-loader',
             'vue-router',
-            'eslint-plugin-react',
-            '@angular/common',
             'node-sass',
             'zone.js',
             'react-router-dom',
@@ -613,115 +719,59 @@ const fetchProjectList = async () => {
             'mongoose',
             'q',
             'handlebars',
-            'html-webpack-plugin',
-            '@angular/platform-browser',
-            'url-loader',
-            'webpack-dev-server',
             'ws',
-            '@angular/compiler',
-            '@angular/forms',
-            'postcss-loader',
-            'request-promise',
             'mongodb',
-            '@angular/platform-browser-dynamic',
-            'sass-loader',
             'bootstrap',
-            '@angular/router',
-            '@babel/preset-env',
             'gulp',
             'jest',
             'qs',
             'ejs',
-            'babel-polyfill',
             'superagent',
-            'object-assign',
             'mocha',
-            'path',
-            'autoprefixer',
             'graphql',
-            'eslint-plugin-jsx-a11y',
-            'cors',
-            'babel-preset-es2015',
             'socket.io',
-            'react-scripts',
             'redis',
             'chai',
             'immutable',
-            'prettier',
-            '@types/react',
             'xml2js',
             'vuex',
             'joi',
             'morgan',
-            'moment-timezone',
-            '@angular/animations',
             'chokidar',
             'date-fns',
-            'gulp-util',
             'cookie-parser',
             'deepmerge',
-            'fs',
-            'yosay',
-            'less',
-            '@angular/http',
-            'ember-cli-babel',
             'execa',
-            'react-router',
             'resolve',
-            '@alifd/next',
-            'babel-jest',
-            'postcss',
             'pg',
             'mysql',
             'ajv',
-            'mini-css-extract-plugin',
             'redux-thunk',
             'query-string',
             '@material-ui/core',
-            '@types/lodash',
             'whatwg-fetch',
-            '@types/express',
             'marked',
             'cross-spawn',
-            'eslint-loader',
             'nan',
             'loader-utils',
             'compression',
             'isomorphic-fetch',
             'mime',
-            'react-dev-utils',
-            'coffee-script',
             'co',
             'element-ui',
             'socket.io-client',
             'promise',
             'koa',
-            'case-sensitive-paths-webpack-plugin',
-            'eslint-plugin-flowtype',
             'meow',
-            'babel-preset-react',
-            '@typescript-eslint/parser',
-            'extract-text-webpack-plugin',
-            'source-map-support',
             'download-git-repo',
-            '@babel/polyfill',
             'crypto-js',
-            '@typescript-eslint/eslint-plugin',
             'validator',
-            '@babel/preset-react',
-            'babel-preset-env',
-            'minimatch',
             'got',
-            'webpack-manifest-plugin',
-            'es6-promise',
-            'postcss-flexbugs-fixes',
-            'node-uuid',
-            '@babel/plugin-proposal-class-properties',
             'extend',
-            'babel-cli',
-            'less-loader',
             'antd',
-            '@types/react-dom'
+            'postcss-flexbugs-fixes',
+            'es6-promise',
+            'prop-types'
         ]
         
         let projectPages = []
@@ -785,105 +835,327 @@ const fetchProjects = async () => {
     
     let projects = [
         'lodash',
-    'react',
-    'chalk',
-    'commander',
-    'express',
-    'axios',
-    'fs-extra',
-    'debug',
-    'vue',
-    'uuid',
-    'async',
-    'bluebird',
-    'core-js',
-    'classnames',
-    'inquirer',
-    'yargs',
-    'rxjs',
-    'webpack',
-    'underscore',
-    'typescript',
-    'glob',
-    'mkdirp',
-    'dotenv',
-    'body-parser',
-    '@babel/runtime',
-    'node-fetch',
-    'colors',
-    'minimist',
-    'jquery',
-    'semver',
-    'redux',
-    'winston',
-    'rimraf',
-    'jsonwebtoken',
-    'ora',
-    'styled-components',
-    'shelljs',
-    'react-redux',
-    'js-yaml',
-    'cheerio',
-    'through2',
-    'ramda',
-    'vue-router',
-    'node-sass',
-    'zone.js',
-    'react-router-dom',
-    'reflect-metadata',
-    'mongoose',
-    'q',
-    'handlebars',
-    'ws',
-    'mongodb',
-    'bootstrap',
-    'gulp',
-    'jest',
-    'qs',
-    'ejs',
-    'superagent',
-    'mocha',
-    'graphql',
-    'socket.io',
-    'redis',
-    'chai',
-    'immutable',
-    'xml2js',
-    'vuex',
-    'joi',
-    'morgan',
-    'chokidar',
-    'date-fns',
-    'cookie-parser',
-    'deepmerge',
-    'execa',
-    'resolve',
-    'pg',
-    'mysql',
-    'ajv',
-    'redux-thunk',
-    'query-string',
-    '@material-ui/core',
-    'whatwg-fetch',
-    'marked',
-    'cross-spawn',
-    'nan',
-    'loader-utils',
-    'compression',
-    'isomorphic-fetch',
-    'mime',
-    'co',
-    'element-ui',
-    'socket.io-client',
-    'promise',
-    'koa',
-    'meow',
-    'download-git-repo',
-    'crypto-js',
-    'validator',
-    'got',
-    'extend',
-    'antd']
+        'react',
+        'chalk',
+        'tslib',
+        'request',
+        'commander',
+        'express',
+        'moment',
+        'axios',
+        'react-dom',
+        'prop-types',
+        'fs-extra',
+        'debug',
+        'vue',
+        'uuid',
+        'async',
+        'bluebird',
+        'core-js',
+        'classnames',
+        'inquirer',
+        'yargs',
+        'rxjs',
+        'webpack',
+        'underscore',
+        'typescript',
+        'glob',
+        'mkdirp',
+        'dotenv',
+        'body-parser',
+        '@types/node',
+        '@babel/runtime',
+        'node-fetch',
+        'colors',
+        'minimist',
+        'jquery',
+        'aws-sdk',
+        'semver',
+        'babel-loader',
+        'eslint',
+        'babel-runtime',
+        'redux',
+        'css-loader',
+        'winston',
+        'rimraf',
+        '@babel/core',
+        'jsonwebtoken',
+        'ora',
+        'style-loader',
+        'styled-components',
+        'babel-core',
+        'shelljs',
+        'yeoman-generator',
+        'react-redux',
+        'js-yaml',
+        'cheerio',
+        'eslint-plugin-import',
+        '@angular/core',
+        'babel-eslint',
+        'through2',
+        'ramda',
+        'file-loader',
+        'vue-router',
+        'eslint-plugin-react',
+        '@angular/common',
+        'node-sass',
+        'zone.js',
+        'react-router-dom',
+        'reflect-metadata',
+        'mongoose',
+        'q',
+        'handlebars',
+        'html-webpack-plugin',
+        '@angular/platform-browser',
+        'url-loader',
+        'webpack-dev-server',
+        'ws',
+        '@angular/compiler',
+        '@angular/forms',
+        'postcss-loader',
+        'request-promise',
+        'mongodb',
+        '@angular/platform-browser-dynamic',
+        'sass-loader',
+        'bootstrap',
+        '@angular/router',
+        '@babel/preset-env',
+        'gulp',
+        'jest',
+        'qs',
+        'ejs',
+        'babel-polyfill',
+        'superagent',
+        'object-assign',
+        'mocha',
+        'path',
+        'autoprefixer',
+        'graphql',
+        'eslint-plugin-jsx-a11y',
+        'cors',
+        'babel-preset-es2015',
+        'socket.io',
+        'react-scripts',
+        'redis',
+        'chai',
+        'immutable',
+        'prettier',
+        '@types/react',
+        'xml2js',
+        'vuex',
+        'joi',
+        'morgan',
+        'moment-timezone',
+        '@angular/animations',
+        'chokidar',
+        'date-fns',
+        'gulp-util',
+        'cookie-parser',
+        'deepmerge',
+        'fs',
+        'yosay',
+        'less',
+        '@angular/http',
+        'ember-cli-babel',
+        'execa',
+        'react-router',
+        'resolve',
+        '@alifd/next',
+        'babel-jest',
+        'postcss',
+        'pg',
+        'mysql',
+        'ajv',
+        'mini-css-extract-plugin',
+        'redux-thunk',
+        'query-string',
+        '@material-ui/core',
+        '@types/lodash',
+        'whatwg-fetch',
+        '@types/express',
+        'marked',
+        'cross-spawn',
+        'eslint-loader',
+        'nan',
+        'loader-utils',
+        'compression',
+        'isomorphic-fetch',
+        'mime',
+        'react-dev-utils',
+        'coffee-script',
+        'co',
+        'element-ui',
+        'socket.io-client',
+        'promise',
+        'koa',
+        'case-sensitive-paths-webpack-plugin',
+        'eslint-plugin-flowtype',
+        'meow',
+        'babel-preset-react',
+        '@typescript-eslint/parser',
+        'extract-text-webpack-plugin',
+        'source-map-support',
+        'download-git-repo',
+        '@babel/polyfill',
+        'crypto-js',
+        '@typescript-eslint/eslint-plugin',
+        'validator',
+        '@babel/preset-react',
+        'babel-preset-env',
+        'minimatch',
+        'got',
+        'webpack-manifest-plugin',
+        'es6-promise',
+        'postcss-flexbugs-fixes',
+        'node-uuid',
+        '@babel/plugin-proposal-class-properties',
+        'extend',
+        'babel-cli',
+        'less-loader',
+        'antd',
+        '@types/react-dom',
+        'globby',
+        'webpack-cli',
+        'optimize-css-assets-webpack-plugin',
+        'react-transition-group',
+        'request-promise-native',
+        'optimist',
+        'nodemailer',
+        'del',
+        'eslint-plugin-react-hooks',
+        'npm',
+        'babel-preset-react-app',
+        'md5',
+        'figlet',
+        'bunyan',
+        'sequelize',
+        'jsdom',
+        'js-cookie',
+        'terser-webpack-plugin',
+        'eslint-config-react-app',
+        'history',
+        'angular',
+        'invariant',
+        '@testing-library/react',
+        'config',
+        '@types/jest',
+        'update-notifier',
+        'lodash.get',
+        '@testing-library/jest-dom',
+        'ts-node',
+        'form-data',
+        'shortid',
+        '@material-ui/icons',
+        'puppeteer',
+        'd3',
+        'express-session',
+        'passport',
+        'camelcase',
+        'path-to-regexp',
+        'uglify-js',
+        'react-select',
+        'dotenv-expand',
+        'cross-env',
+        'font-awesome',
+        'graphql-tag',
+        'webpack-merge',
+        '@testing-library/user-event',
+        'eslint-plugin-prettier',
+        'lodash.merge',
+        'express-validator',
+        'mustache',
+        'tmp',
+        '@babel/plugin-transform-runtime',
+        'reselect',
+        'postcss-preset-env',
+        'pluralize',
+        '@types/jsonwebtoken',
+        'eslint-config-airbnb',
+        'lru-cache',
+        'ncp',
+        'fsevents',
+        '@oclif/command',
+        'ioredis',
+        'ember-cli-htmlbars',
+        'babel-plugin-transform-runtime',
+        'querystring',
+        '@oclif/config',
+        'jade',
+        'bignumber.js',
+        'esm',
+        'dayjs',
+        'gulp-rename',
+        'cookie-session',
+        '@fortawesome/fontawesome-svg-core',
+        'react-helmet',
+        'mime-types',
+        'url',
+        'prompt',
+        'koa-router',
+        'amqplib',
+        'lit-element',
+        'highlight.js',
+        'normalize.css',
+        'archiver',
+        'regenerator-runtime',
+        'ts-loader',
+        'react-native',
+        'iconv-lite',
+        'underscore.string',
+        'browserify',
+        'rollup',
+        'events',
+        'log4js',
+        'identity-obj-proxy',
+        '@babel/cli',
+        'tslint',
+        'raf',
+        'opn',
+        'lodash.debounce',
+        'crypto',
+        'log-symbols',
+        'progress',
+        'clone',
+        'recompose',
+        'resize-observer-polyfill',
+        'nodemon',
+        'babel-preset-stage-0',
+        '@fortawesome/free-solid-svg-icons',
+        'copy-webpack-plugin',
+        'eventemitter3',
+        'popper.js',
+        'helmet',
+        '@svgr/webpack',
+        'web3',
+        'react-app-polyfill',
+        'firebase',
+        'polished',
+        'pug',
+        'xtend',
+        'bcrypt',
+        'multer',
+        'hoist-non-react-statics',
+        '@oclif/plugin-help',
+        '@types/cookie-session',
+        'lodash-es',
+        'react-hot-loader',
+        'knex',
+        'postcss-safe-parser',
+        'readable-stream',
+        'vue-template-compiler',
+        'babel-register',
+        'inherits',
+        'redux-saga',
+        'serve-favicon',
+        'color',
+        '@emotion/styled',
+        'i18next',
+        'lodash.isequal',
+        'boom',
+        'strip-ansi',
+        'jsonfile',
+        'workbox-webpack-plugin'
+    ]
     
     // await runCmd('rm -rf git && mkdir git')
     
