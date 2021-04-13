@@ -86,6 +86,7 @@ const parseProjects = () => {
             comment: 0,
             console: 0,
             utility: 0,
+            throw: 0,
             prefix: {}  
         }
     })
@@ -147,6 +148,7 @@ const parseProjects = () => {
     const consoleMessages = []
     const utilities = []
     const identifiers = []
+    const throwStatements = []
     const identifiersCount = {}
     asts.forEach(({ file, ast }) => {
         console.log(`Searching for console occurrences in ${file}.`)
@@ -225,70 +227,70 @@ const parseProjects = () => {
                 }
                 
 
-                const arguments = path.node.arguments && path.node.arguments.filter(arg => {
-                    // Identifier
-                    if (arg.name && arg.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                        return true
-                    }
+                // const arguments = path.node.arguments && path.node.arguments.filter(arg => {
+                //     // Identifier
+                //     if (arg.name && arg.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //         return true
+                //     }
 
-                    // xyz.deprecat
-                    if (arg.property && arg.property.name && arg.property.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                        return true
-                    }
+                //     // xyz.deprecat
+                //     if (arg.property && arg.property.name && arg.property.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //         return true
+                //     }
 
-                    //deprecat.xyz
-                    if (arg.object && arg.object.name && arg.object.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                        return true
-                    }
+                //     //deprecat.xyz
+                //     if (arg.object && arg.object.name && arg.object.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //         return true
+                //     }
 
-                    // String Literal
-                    if (arg.value && arg.value.indexOf && arg.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                        return true
-                    }
+                //     // String Literal
+                //     if (arg.value && arg.value.indexOf && arg.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //         return true
+                //     }
 
-                    if (arg.quasis && arg.quasis.length) {
-                        const quasis = arg.quasis.filter(quasi => {
-                            const value = quasi.value.raw || ''
-                            return  value.toLocaleLowerCase().indexOf('deprecat') > -1
-                        })
+                //     if (arg.quasis && arg.quasis.length) {
+                //         const quasis = arg.quasis.filter(quasi => {
+                //             const value = quasi.value.raw || ''
+                //             return  value.toLocaleLowerCase().indexOf('deprecat') > -1
+                //         })
 
-                        if (quasis.length) {
-                            return true
-                        }
-                    }
+                //         if (quasis.length) {
+                //             return true
+                //         }
+                //     }
 
-                    if (arg.type == 'BinaryExpression') {
-                        recast.visit(arg, {
-                            visitLiteral(path) {
-                                if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                                    console.log('CallExpression>arguments>BinaryExpression', {
-                                        file: visitingFile,
-                                        line: path.node.loc.start.line
-                                    })
-                                    utilities.push({
-                                        file: visitingFile,
-                                        line: path.node.loc.start.line
-                                    })
-                                }
-                                return false
-                            }
-                        })
-                    }
+                //     if (arg.type == 'BinaryExpression') {
+                //         recast.visit(arg, {
+                //             visitLiteral(path) {
+                //                 if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //                     console.log('CallExpression>arguments>BinaryExpression', {
+                //                         file: visitingFile,
+                //                         line: path.node.loc.start.line
+                //                     })
+                //                     utilities.push({
+                //                         file: visitingFile,
+                //                         line: path.node.loc.start.line
+                //                     })
+                //                 }
+                //                 return false
+                //             }
+                //         })
+                //     }
 
-                })
+                // })
                 
-                if (arguments && arguments.length) {
-                    arguments.forEach(argument => {
-                        utilities.push({
-                            file: visitingFile,
-                            line: path.node.loc.start.line
-                        })
-                        console.log('CallExpression>arguments',{
-                            file: visitingFile,
-                            line: path.node.loc.start.line
-                        })
-                    })
-                }
+                // if (arguments && arguments.length) {
+                //     arguments.forEach(argument => {
+                //         utilities.push({
+                //             file: visitingFile,
+                //             line: path.node.loc.start.line
+                //         })
+                //         console.log('CallExpression>arguments',{
+                //             file: visitingFile,
+                //             line: path.node.loc.start.line
+                //         })
+                //     })
+                // }
 
                 this.traverse(path);
             }
@@ -302,8 +304,9 @@ const parseProjects = () => {
             visitVariableDeclarator(path){
                 // Definição de variável em que o nome da função tem 'deprecat', possível util senda definida.
                 const idName = path.node.id.name || ''
+                const init = path.node.init && path.node.init.type
 
-                if (idName.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                if (idName.toLocaleLowerCase().indexOf('deprecat') > -1 && ['FunctionExpression', 'ArrowFunctionExpression'].includes(init)) {
                     utilities.push({
                         file: visitingFile,
                         line: path.node.loc.start.line
@@ -314,21 +317,21 @@ const parseProjects = () => {
                     })
                 }
                 
-                path.node.init && path.node.init.type == 'BinaryExpression' && recast.visit(path.node.init, {
-                    visitLiteral(path){
-                        if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                            utilities.push({
-                                file: visitingFile,
-                                line: path.node.loc.start.line
-                            })
-                            console.log('VariableDeclarator>Init', {
-                                file: visitingFile,
-                                line: path.node.loc.start.line
-                            })
-                        }
-                        return false
-                    }
-                })
+                // path.node.init && path.node.init.type == 'BinaryExpression' && recast.visit(path.node.init, {
+                //     visitLiteral(path){
+                //         if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //             utilities.push({
+                //                 file: visitingFile,
+                //                 line: path.node.loc.start.line
+                //             })
+                //             console.log('VariableDeclarator>Init', {
+                //                 file: visitingFile,
+                //                 line: path.node.loc.start.line
+                //             })
+                //         }
+                //         return false
+                //     }
+                // })
                 
                 this.traverse(path);
             }
@@ -374,68 +377,68 @@ const parseProjects = () => {
                     })
                 }
 
-                const params = path.node.params && path.node.params.filter(param => {
-                    if (param.name && param.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                        return true
-                    }
+                // const params = path.node.params && path.node.params.filter(param => {
+                //     if (param.name && param.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //         return true
+                //     }
                     
-                    if (param.left && param.left.name && param.left.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                        return true
-                    }
+                //     if (param.left && param.left.name && param.left.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                //         return true
+                //     }
 
-                    return false
-                })
+                //     return false
+                // })
 
-                if (params && params.length) {
-                    utilities.push({
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                    console.log('FunctionExpression>Params',{
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                }
+                // if (params && params.length) {
+                //     utilities.push({
+                //         file: visitingFile,
+                //         line: path.node.loc.start.line
+                //     })
+                //     console.log('FunctionExpression>Params',{
+                //         file: visitingFile,
+                //         line: path.node.loc.start.line
+                //     })
+                // }
                 return false
             }
         })
     })
 
-    asts.forEach(({ file, ast }) => {
-        // console.log(`Searching for utilities imports in ${file}.`)
-        visitingFile = file;
-        recast.visit(ast, {
-            // Imported elements, possibly utils
-            visitImportDefaultSpecifier(path){
-                const localName = path.node.local.name
-                if (localName.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                    utilities.push({
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                    console.log('ImportDefault',{
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                }
-                return false
-            },
-            visitImportSpecifier(path){
-                const importedName = path.node.imported.name
-                if (importedName.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                    utilities.push({
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                    console.log('ImportSpecifier',{
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                }
-                return false
-            }
-        })
-    })
+    // asts.forEach(({ file, ast }) => {
+    //     // console.log(`Searching for utilities imports in ${file}.`)
+    //     visitingFile = file;
+    //     recast.visit(ast, {
+    //         // Imported elements, possibly utils
+    //         visitImportDefaultSpecifier(path){
+    //             const localName = path.node.local.name
+    //             if (localName.toLocaleLowerCase().indexOf('deprecat') > -1) {
+    //                 utilities.push({
+    //                     file: visitingFile,
+    //                     line: path.node.loc.start.line
+    //                 })
+    //                 console.log('ImportDefault',{
+    //                     file: visitingFile,
+    //                     line: path.node.loc.start.line
+    //                 })
+    //             }
+    //             return false
+    //         },
+    //         visitImportSpecifier(path){
+    //             const importedName = path.node.imported.name
+    //             if (importedName.toLocaleLowerCase().indexOf('deprecat') > -1) {
+    //                 utilities.push({
+    //                     file: visitingFile,
+    //                     line: path.node.loc.start.line
+    //                 })
+    //                 console.log('ImportSpecifier',{
+    //                     file: visitingFile,
+    //                     line: path.node.loc.start.line
+    //                 })
+    //             }
+    //             return false
+    //         }
+    //     })
+    // })
 
     asts.forEach(({ file, ast }) => {
         // console.log(`Searching for utilities imports in ${file}.`)
@@ -446,7 +449,7 @@ const parseProjects = () => {
                 recast.visit(path, {
                     visitLiteral(path) {
                         if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
-                            consoleMessages.push({
+                            throwStatements.push({
                                 file: visitingFile,
                                 line: path.node.loc.start.line
                             });
@@ -463,31 +466,31 @@ const parseProjects = () => {
         })
     })
 
-    asts.forEach(({ file, ast }) => {
-        console.log(`Searching for ObjectExpression in ${file}.`)
-        visitingFile = file;
-        recast.visit(ast, {
-            // propriedades de objetos
-            visitObjectExpression(path) {
-                const props = path.node.properties.filter(prop => {
-                    return prop.key && typeof prop.key.name == "string" && prop.key.name.toLocaleLowerCase().indexOf('deprecat') > -1
-                })
+    // asts.forEach(({ file, ast }) => {
+    //     console.log(`Searching for ObjectExpression in ${file}.`)
+    //     visitingFile = file;
+    //     recast.visit(ast, {
+    //         // propriedades de objetos
+    //         visitObjectExpression(path) {
+    //             const props = path.node.properties.filter(prop => {
+    //                 return prop.key && typeof prop.key.name == "string" && prop.key.name.toLocaleLowerCase().indexOf('deprecat') > -1
+    //             })
 
-                props.forEach(prop => {
-                    utilities.push({
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                    console.log('ObjectExpression>Property',{
-                        file: visitingFile,
-                        line: path.node.loc.start.line
-                    })
-                })
+    //             props.forEach(prop => {
+    //                 utilities.push({
+    //                     file: visitingFile,
+    //                     line: path.node.loc.start.line
+    //                 })
+    //                 console.log('ObjectExpression>Property',{
+    //                     file: visitingFile,
+    //                     line: path.node.loc.start.line
+    //                 })
+    //             })
                 
-                return false
-            }
-        })
-    })
+    //             return false
+    //         }
+    //     })
+    // })
 
     // const allLocations = search.searchAllLocations(NPM_PATH)
     // const allFilesContent = allLocations.map(location => ({
@@ -531,6 +534,12 @@ const parseProjects = () => {
 
     })
 
+    throwStatements.forEach(occurrence => {
+        const projectName = occurrence.file.split('/')[4]
+        projects[projectName].throw = projects[projectName].throw + 1
+
+    })
+
     // identifiers.forEach(occurrence => {
     //     const projectName = occurrence.file.split('/')[4]
     //     if (projects[projectName]) {
@@ -556,8 +565,11 @@ const parseProjects = () => {
         {id: 'jsdoc', title: 'jsdoc'},
         {id: 'comment', title: 'comment'},
         {id: 'console', title: 'console'},
-        {id: 'utility', title: 'utility'}
+        {id: 'utility', title: 'utility'},
+        {id: 'throw', title: 'throw'},
     ], projectsArray)
+
+    console.log(projectsArray)
 
     // writeToCSV(`csv/prefix/prefix_${new Date().getTime()}.csv`, [
     //     {id: 'identifier', title: 'identifier'},
