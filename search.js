@@ -14,7 +14,12 @@ const isMinFile = filePath => {
     const pathParts = filePath.split('/')
     const fileName = pathParts[pathParts.length - 1]
     const isMinFile = fileName.indexOf('.min.js') > -1
-    return isMinFile
+    const isBundleFile = fileName.indexOf('.bundle.js') > -1
+    const fileContent = getFileContent(filePath)
+    const hasMinStart = fileContent.indexOf('!function(') == 0
+    const hasFewLines = fileContent.split('\n').length < 3
+
+    return isMinFile || isBundleFile || hasMinStart || hasFewLines
 }
 
 const getFilesFromDirectory = (directory, onFileContent, onError) => {
@@ -91,6 +96,8 @@ const searchAllLocations = (rootPath) => {
     return keywordsOccurrences
 }
 
+let allFilesCount = 0;
+
 const projectSearch = (rootPath, regex = REGEX, projects = {}) => {
     const files = getFilesFromDirectory(rootPath)
     files.map(file => {
@@ -102,7 +109,11 @@ const projectSearch = (rootPath, regex = REGEX, projects = {}) => {
             }
         } else if (isJSFile(file.path) && !isMinFile(file.path)) {
             // console.log(`Searching any keywords in ${file.path}`)
-            const projectName = file.path.split('/')[4] || ''
+            allFilesCount++;
+            let projectName = file.path.split('/')[4] || ''
+            if (projectName.indexOf('@') === 0) {
+                projectName = projectName + '/' + (file.path.split('/')[5] || '')
+            }
             const fileContent = getFileContent(file.path)
             const occurrences = fileContent.match(regex)
             if (occurrences) {
@@ -114,7 +125,10 @@ const projectSearch = (rootPath, regex = REGEX, projects = {}) => {
             }
         }
     })
-    return projects
+    return {
+        ...projects,
+        allFilesCount
+    }
 }
 
 const searchLocations = (obj, parent) => {
@@ -240,11 +254,22 @@ const JSDoc = rootPath => {
         } else if (isJSFile(file.path) && !isMinFile(file.path)) {
             console.log(`Searching JSDoc occurrences in ${file.path}`)
             const fileContent = getFileContent(file.path)
-            const occurrencies = fileContent.match(JS_DOC_REGEX)
-            if (occurrencies) {
-                jsDocOccurrencies.push({
-                    file: file.path,
-                    matches: [...occurrencies].length
+            
+            const AST = flowParser.parse(fileContent, {})
+            const occurrencesInFile = AST.comments.filter(({ value = '' }) => {
+                const location = value.match(JS_DOC_REGEX) || []
+                return location.length
+            }) || []
+
+            if (occurrencesInFile.length) {
+                occurrencesInFile.forEach(({ loc }) => {
+                    jsDocOccurrencies.push({
+                        file: file.path,
+                        lineStart: loc.start.line,
+                        lineEnd: loc.end.line,
+                        context: 'Comment',
+                        category: 'JSdoc annotation'
+                    })
                 })
             }
         }
@@ -269,14 +294,19 @@ const comments = rootPath => {
             })
 
             if (commentsWithOccurrences.length) {
-                commentsWithOccurrences.forEach(({value: comment}) => {
+                commentsWithOccurrences.forEach(({value: comment, loc}) => {
                     const commentWithNoJSDoc = comment.replace('@deprecate', '')
                     const occurrences = commentWithNoJSDoc.match(REGEX)
                     if (occurrences.length) {
-                        commentsOccurrences.push({
-                            file: occurrence.file,
-                            matches: occurrences.length
-                        })
+                        for (let i = 0; i < occurrences.length; i++) {
+                            commentsOccurrences.push({
+                                file: occurrence.file,
+                                lineStart: loc.start.line,
+                                lineEnd: loc.end.line,
+                                context: 'Comment',
+                                category: 'Code comment'
+                            })
+                        }
                     }
                 })
             }

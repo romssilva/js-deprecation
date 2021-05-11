@@ -47,6 +47,13 @@ let blackListedProjects = [
 
 let visitingFile = '';
 
+const veenDiagram = {
+    jsdoc: [],
+    comment: [],
+    console: [],
+    utility: []
+}
+
 const runCmd = async (cmmd, callback = () => null) => {
     return new Promise((res, rej) => {
         cmd.get(cmmd, (err, data, stderr) => {
@@ -68,7 +75,7 @@ const writeToCSV = async (path, header, records) => {
 }
 
 const parseProjects = () => {
-    // const NPM_PATH = './npm/lib/node_modules/element-ui'
+    // const NPM_PATH = './npm/lib/node_modules/@angular'
     const NPM_PATH = './npm/lib/node_modules'
     // const GIT_PATH = './git'
     // const fileCount = search.jsFilesCount(NPM_PATH)
@@ -119,8 +126,14 @@ const parseProjects = () => {
     // ], jsDocOccurrences)
     
     jsDocOccurrences.forEach(occurrence => {
-        const projectName = occurrence.file.split('/')[4]
-        projects[projectName].jsdoc = projects[projectName].jsdoc + occurrence.matches
+        let projectName = occurrence.file.split('/')[4] || ''
+        if (projectName.indexOf('@') === 0) {
+            projectName = projectName + '/' + (occurrence.file.split('/')[5] || '')
+        }
+        if (!veenDiagram.jsdoc.includes(occurrence.file)) {
+            veenDiagram.jsdoc.push(occurrence.file)
+        }
+        projects[projectName].jsdoc = projects[projectName].jsdoc + 1
 
     })
     
@@ -131,9 +144,14 @@ const parseProjects = () => {
     // ], commentsOccurrences)
     
     commentsOccurrences.forEach(occurrence => {
-        const projectName = occurrence.file.split('/')[4]
-        projects[projectName].comment = projects[projectName].comment + occurrence.matches
-
+        let projectName = occurrence.file.split('/')[4] || ''
+        if (projectName.indexOf('@') === 0) {
+            projectName = projectName + '/' + (occurrence.file.split('/')[5] || '')
+        }
+        if (!veenDiagram.comment.includes(occurrence.file)) {
+            veenDiagram.comment.push(occurrence.file)
+        }
+        projects[projectName].comment = projects[projectName].comment + 1
     })
 
     const locations = search.keywordsSearch(NPM_PATH)
@@ -162,9 +180,15 @@ const parseProjects = () => {
                         visitLiteral(path){
                             const literalValues = path.node.value && path.node.value.toLocaleLowerCase ? path.node.value.toLowerCase().match(/deprecat/g) : []
                             literalValues && literalValues.forEach(value => {
+                                if (!veenDiagram.console.includes(visitingFile)) {
+                                    veenDiagram.console.push(visitingFile)
+                                }
                                 consoleMessages.push({
                                     file: visitingFile,
-                                    line: path.node.loc.start.line
+                                    lineStart: path.node.loc.start.line,
+                                    lineEnd: path.node.loc.end.line,
+                                    context: 'CallExpression',
+                                    category: 'Console message'
                                 });
                             })
                             return false;
@@ -180,9 +204,15 @@ const parseProjects = () => {
                         file: visitingFile,
                         line: path.node.loc.start.line
                     })
+                    if (!veenDiagram.utility.includes(visitingFile)) {
+                        veenDiagram.utility.push(visitingFile)
+                    }
                     utilities.push({
                         file: visitingFile,
-                        line: path.node.loc.start.line
+                        lineStart: path.node.loc.start.line,
+                        lineEnd: path.node.loc.end.line,
+                        context: 'CallExpression',
+                        category: 'Deprecation utility'
                     })
                 }
 
@@ -193,9 +223,15 @@ const parseProjects = () => {
                         file: visitingFile,
                         line: path.node.loc.start.line
                     })
+                    if (!veenDiagram.utility.includes(visitingFile)) {
+                        veenDiagram.utility.push(visitingFile)
+                    }
                     utilities.push({
                         file: visitingFile,
-                        line: path.node.loc.start.line
+                        lineStart: path.node.loc.start.line,
+                        lineEnd: path.node.loc.end.line,
+                        context: 'CallExpression',
+                        category: 'Deprecation utility'
                     })
                 }
 
@@ -206,9 +242,15 @@ const parseProjects = () => {
                         file: visitingFile,
                         line: path.node.loc.start.line
                     })
+                    if (!veenDiagram.utility.includes(visitingFile)) {
+                        veenDiagram.utility.push(visitingFile)
+                    }
                     utilities.push({
                         file: visitingFile,
-                        line: path.node.loc.start.line
+                        lineStart: path.node.loc.start.line,
+                        lineEnd: path.node.loc.end.line,
+                        context: 'CallExpression',
+                        category: 'Deprecation utility'
                     })
                 }
                 
@@ -307,9 +349,15 @@ const parseProjects = () => {
                 const init = path.node.init && path.node.init.type
 
                 if (idName.toLocaleLowerCase().indexOf('deprecat') > -1 && ['FunctionExpression', 'ArrowFunctionExpression'].includes(init)) {
+                    if (!veenDiagram.utility.includes(visitingFile)) {
+                        veenDiagram.utility.push(visitingFile)
+                    }
                     utilities.push({
                         file: visitingFile,
-                        line: path.node.loc.start.line
+                        lineStart: path.node.loc.start.line,
+                        lineEnd: path.node.loc.end.line,
+                        context: 'CallExpression',
+                        category: 'Deprecation utility'
                     })
                     console.log('VariableDeclarator>Identifier', {
                         file: visitingFile,
@@ -346,9 +394,15 @@ const parseProjects = () => {
                 // Definição de variável em que o nome da função tem 'deprecat', possível util senda definida.
                 // console.log(path.node.id.name)
                 if (path.node.id && path.node.id.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                    if (!veenDiagram.utility.includes(visitingFile)) {
+                        veenDiagram.utility.push(visitingFile)
+                    }
                     utilities.push({
                         file: visitingFile,
-                        line: path.node.loc.start.line
+                        lineStart: path.node.loc.start.line,
+                        lineEnd: path.node.loc.end.line,
+                        context: 'CallExpression',
+                        category: 'Deprecation utility'
                     })
                     console.log('FunctionDeclaration',{
                         file: visitingFile,
@@ -367,9 +421,15 @@ const parseProjects = () => {
             visitFunctionExpression(path){
                 // Definição de variável em que o nome da função tem 'deprecat', possível util senda definida.
                 if (path.node.id && path.node.id.name.toLocaleLowerCase().indexOf('deprecat') > -1) {
+                    if (!veenDiagram.utility.includes(visitingFile)) {
+                        veenDiagram.utility.push(visitingFile)
+                    }
                     utilities.push({
                         file: visitingFile,
-                        line: path.node.loc.start.line
+                        lineStart: path.node.loc.start.line,
+                        lineEnd: path.node.loc.end.line,
+                        context: 'CallExpression',
+                        category: 'Deprecation utility'
                     })
                     console.log('FunctionExpression',{
                         file: visitingFile,
@@ -451,7 +511,10 @@ const parseProjects = () => {
                         if (path.node.value && path.node.value.indexOf && path.node.value.toLocaleLowerCase().indexOf('deprecat') > -1) {
                             throwStatements.push({
                                 file: visitingFile,
-                                line: path.node.loc.start.line
+                                lineStart: path.node.loc.start.line,
+                                lineEnd: path.node.loc.end.line,
+                                context: 'ThrowStatement',
+                                category: 'ThrowStatement'
                             });
                             console.log('ThrowStatement',{
                                 file: visitingFile,
@@ -523,19 +586,28 @@ const parseProjects = () => {
     // })
 
     consoleMessages.forEach(occurrence => {
-        const projectName = occurrence.file.split('/')[4]
+        let projectName = occurrence.file.split('/')[4] || ''
+        if (projectName.indexOf('@') === 0) {
+            projectName = projectName + '/' + (occurrence.file.split('/')[5] || '')
+        }
         projects[projectName].console = projects[projectName].console + 1
 
     })
 
     utilities.forEach(occurrence => {
-        const projectName = occurrence.file.split('/')[4]
+        let projectName = occurrence.file.split('/')[4] || ''
+        if (projectName.indexOf('@') === 0) {
+            projectName = projectName + '/' + (occurrence.file.split('/')[5] || '')
+        }
         projects[projectName].utility = projects[projectName].utility + 1
 
     })
 
     throwStatements.forEach(occurrence => {
-        const projectName = occurrence.file.split('/')[4]
+        let projectName = occurrence.file.split('/')[4] || ''
+        if (projectName.indexOf('@') === 0) {
+            projectName = projectName + '/' + (occurrence.file.split('/')[5] || '')
+        }
         projects[projectName].throw = projects[projectName].throw + 1
 
     })
@@ -568,6 +640,44 @@ const parseProjects = () => {
         {id: 'utility', title: 'utility'},
         {id: 'throw', title: 'throw'},
     ], projectsArray)
+
+    const defaultVeenRecords = {
+        jsdoc: '',
+        comment: '',
+        console: '',
+        utility: ''
+    }
+
+    const veenRecords = [
+        ...(veenDiagram.jsdoc.map(item => ({ ...defaultVeenRecords, jsdoc: item }))),
+        ...(veenDiagram.comment.map(item => ({ ...defaultVeenRecords, comment: item }))),
+        ...(veenDiagram.console.map(item => ({ ...defaultVeenRecords, console: item }))),
+        ...(veenDiagram.utility.map(item => ({ ...defaultVeenRecords, utility: item }))),
+    ]
+
+    writeToCSV(`csv/diagram/diagram_${new Date().getTime()}.csv`, [
+        {id: 'jsdoc', title: 'jsdoc'},
+        {id: 'comment', title: 'comment'},
+        {id: 'console', title: 'console'},
+        {id: 'utility', title: 'utility'}
+    ], veenRecords)
+
+    const contexts = [
+        ...jsDocOccurrences,
+        ...commentsOccurrences,
+        ...consoleMessages,
+        ...utilities
+    ]
+
+    writeToCSV(`csv/contexts/contexts_${new Date().getTime()}.csv`, [
+        {id: 'file', title: 'file'},
+        {id: 'lineStart', title: 'lineStart'},
+        {id: 'lineEnd', title: 'lineEnd'},
+        {id: 'context', title: 'context'},
+        {id: 'category', title: 'category'}
+    ], contexts)
+
+    console.log(veenDiagram)
 
     console.log(projectsArray)
 
